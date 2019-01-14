@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 602px;
+			height: 322px;
+			position: absolute;
+			border: 1px solid black;
+			margin-left: 30%;
+			display: none;
+		}
+		.adds{
+			width: 602px;
+			height: 302px;
+		}
+		.adds img{
+			width: 100%;
+			height: 100%;
+		}
+		.line{
+			width: 0;
+			height: 20px;
+			background: red;
+		}
+		.close{
+			width: 50px;
+			height: 50px;
+			background: red;
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 30px;
+			text-align: center;
+			line-height: 50px;
+		}
+		.jdt{
+			position: absolute;
+			bottom: 0%;
+			left: 48%;
+			font-weight: bold;
+		}
+		.title{
+			font-size: 80px;
+			line-height: 150px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="adds">
+			<img src="../img/lm.gif">
+		</div>
+		<div class="line">
+			
+		</div>
+		<span class="jdt">0%</span>
+		<span class="close">X</span>
+	</div>
+	<h1 class="title">这里假装是一个服装网站</h1>
+</body>
+<script type="text/javascript">
+	// 1，进度条关闭
+	var oBox = document.querySelector(".box");
+	setTimeout(function(){
+		oBox.style.display = "block";
+		var oLine = document.querySelector(".line");
+		var ojdt = document.querySelector(".jdt");
+		var nWidth = 0;
+		var width = document.querySelector(".box").offsetWidth;
+		jdt();
+		function jdt(){
+			var timer = setInterval(function(){
+				nWidth++;
+				if( nWidth >= width ){
+					clearInterval( timer );
+					oBox.style.display = "none"
+				}
+				oLine.style.width = nWidth + "px";
+				percent = parseInt((nWidth / width) * 100)+"%";
+				ojdt.innerHTML = percent;
+			},50);
+		}
+	},3000);
+
+
+
+
+
+
+
+	// 2,手动关闭
+	var oClose = document.querySelector(".close");
+	oClose.onclick = function(){
+		exin()
+	}
+	function exin(){
+		var res = confirm("你到底买不买？");
+		if( res ){
+			window.location.reload();
+		}else{
+			alert("你必须买，傻蛋！！！！")
+			exin()
+		}
+	}
+
+</script>
+</html>

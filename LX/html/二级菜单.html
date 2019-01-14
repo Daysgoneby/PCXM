@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 100%;
+				height: 40px;
+				background: salmon;
+			}
+			.box-1 {
+				width: 1200px;
+				height: 40px;
+				margin: 0 auto;
+				/*background: red;*/
+				
+			}
+			.box-1 li{
+				width: 150px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				list-style: none;
+				float: left;
+				position: relative;
+				
+			}
+			.box-1 ul li a{
+				text-decoration: none;
+				width: 150px;
+				height: 40px;
+				display: block;
+			}
+			.box-1  li a:hover{
+				background: yellow;
+				color: white;
+			}
+			.sec{
+				width: 150px;
+				line-height: 40px;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				text-align: center;
+				background: darkblue;
+				display: none;
+				
+			}
+			.box-1 li:hover .sec{
+				display: block;
+			}
+			.sec p:hover{
+				background: firebrick;	
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box-1">
+				<ul>
+					<li>
+						<a href="">首页</a>
+						<span>.</span>
+						
+						<div class="sec">
+							<p>hduh</p>
+							<p>hduh</p>
+							<p>hduh</p>
+							<p>hduh</p>
+						</div>
+					</li>
+					<li>
+						<a href="">电视剧</a>
+					</li>
+					<li>
+						<a href="">电影</a>
+					</li>
+					<li>
+						<a href="">关于我们</a>
+					</li>
+					<li>
+						<a href="">联系我们</a>
+					</i>
+					<li>
+						<a href="">欢迎加入</a>
+					</li>
+					<li>
+						<a href="">奢侈品</a>
+					</li>
+					<li>
+						<a href="">魔镜魔镜</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

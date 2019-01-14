@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin：0;
+		}
+		.box{
+			width: 350px;
+			height: 300px;
+			border: 1px solid black;
+			margin: 50px auto;
+			padding: 10px;
+			position: relative;
+		}
+		.box input{
+			height: 30px;
+			margin-top: 10px;
+		}
+		span{
+			width: 150px;
+			height: 30px;
+			position: absolute;
+			left: 200px;
+			margin-top: 10px;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<input type="text" name="" placeholder="请输入用户名"><span></span><br>
+	<input type="password" name="" placeholder="请输入密码"><span></span><br>
+	<input type="password" name="" placeholder="请确认密码"><span></span><br>
+	<input type="submit" name="" value="登陆" class="sub">
+</div>
+</body>
+<script type="text/javascript">
+	var oinp=document.querySelectorAll("input");
+	var osub=document.querySelector(".sub");
+	var ospan=document.querySelectorAll("span");
+	var yh=/^[a-z][a-z0-9_]{7,11}$/;
+	var mm=/^[a-z]\d{6,7}$/;
+	var str="";
+	function Reg(i,r){
+		str=oinp[i].value;
+		if (r.test(str)) {
+			ospan[0].style.color="green";
+			ospan[1].style.color="green";
+			ospan[2].style.color="green";
+			ospan[i].innerHTML="输入合法";
+		}
+		else{
+			ospan[i].style.color="red";
+		    ospan[0].innerHTML="必须是8-12位的以英文开头，数字和下划线组成";
+			ospan[1].innerHTML="必须是6-8位的以英文开头，数字组成";
+			ospan[3].innerHTML="输入不合法";
+			oinp[i].value="";
+		}
+	}
+	
+	oinp[0].onblur=function(){
+		Reg(0,yh);	
+	}
+	oinp[1].onblur=function(){
+		Reg(1,mm);	
+	}
+	oinp[2].onblur=function(){
+		Reg(2,mm);	
+	}
+	osub.onclick=function(){
+		if(oinp[0].value!=""&&oinp[1].value!=""&&oinp[2].value!=""){
+			alert("登陆成功");
+		}else{
+			alert("失败");
+		}
+
+	}			
+</script>
+</html>

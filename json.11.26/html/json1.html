@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 1500px;
+			height: 500px;
+			
+			margin: 20px auto;
+		}
+		.box-1{
+			width: 100%;
+			
+		}
+		.item{
+			width: 300px;
+			height: 500px;
+			float: left;
+			margin: 20px;
+			border: 1px solid red;
+		}
+		.dt{
+			width: 100%;
+			height: 300px;
+		}
+		.item dt img{
+			width: 100%;
+			height: 100%;
+		}
+		.info{
+			width: 100%;
+			height: 20px;
+		}
+		.price{
+			font-size: 20px;
+			color: red;
+			font-weight: bold;
+			float: left;
+		}
+		.btn{
+			background: red;
+			color: white;
+			border-radius: 5px;
+			padding: 10px;
+			float: right;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="box-1">
+		<dl class="item">
+			<dt class="dt"><img src="../img/timg.jpg"></dt>
+			<dd>
+				<p class="intro">花瓶用来放置鲜花,可以为室内增添生机感和鲜活感,花瓶还能当做装饰物装点室内空间,怎么才能用好家居装饰花瓶
+                      <div class="info">
+                      	<span class="price">价格6000</span>
+                      	<span class="btn">加入购物车</span>
+                      </div>
+				</p>
+			</dd>
+		</dl>
+		<dl class="item">
+			<dt class="dt"><img src="../img/timg2.jpg"></dt>
+			<dd>
+				<p class="intro">花瓶用来放置鲜花,可以为室内增添生机感和鲜活感,花瓶还能当做装饰物装点室内空间,怎么才能用好家居装饰花瓶
+                      <div class="info">
+                      	<span class="price">价格6000</span>
+                      	<span class="btn">加入购物车</span>
+                      </div>
+				</p>
+			</dd>
+		</dl>
+		<dl class="item">
+			<dt class="dt"><img src="../img/timg.jpg"></dt>
+			<dd>
+				<p class="intro">花瓶用来放置鲜花,可以为室内增添生机感和鲜活感,花瓶还能当做装饰物装点室内空间,怎么才能用好家居装饰花瓶
+                      <div class="info">
+                      	<span class="price">价格6000</span>
+                      	<span class="btn">加入购物车</span>
+                      </div>
+				</p>
+			</dd>
+		</dl>
+		<dl class="item">
+			<dt class="dt"><img src="../img/timg2.jpg"></dt>
+			<dd>
+				<p class="intro">花瓶用来放置鲜花,可以为室内增添生机感和鲜活感,花瓶还能当做装饰物装点室内空间,怎么才能用好家居装饰花瓶
+                      <div class="info">
+                      	<span class="price">价格6000</span>
+                      	<span class="btn">加入购物车</span>
+                      </div>
+				</p>
+			</dd>
+		</dl>
+	</div>
+</div>
+<script type="text/javascript">
+	window.onload=function(){
+		//json数据
+		var arr=[{
+			"imgErl":"../img/timg.jpg","intro":"做人最重要的是开心1！！！","price":"8888"
+		},{
+			"imgErl":"../img/timg2.jpg","intro":"做人最重要的是开心2！！！","price":"6666"
+		},{
+			"imgErl":"../img/timg.jpg","intro":"做人最重要的是开心3！！！","price":"9999"
+		},{
+			"imgErl":"../img/timg2.jpg","intro":"做人最重要的是开心4！！！","price":"5555"
+		}]
+		var bod=document.getElementsByTagName('body')[0];
+		var html="";
+		bod.onclick=function(){
+		for(var i=0;i<arr.length;i++){
+			var str=`<dl class="item"><dt class="dt"><img src="${arr[i].imgErl}"></dt><dd><p class="intro">${arr[i].intro}<div class="info"<span class="price">${arr[i].price}</span><span class="btn">加入购物车</span></div></p></dd></dl>`;
+			html+=str;
+		}
+		document.getElementsByClassName("box-1")[0].innerHTML=html;
+	}
+}
+</script>
+</body>
+</html>

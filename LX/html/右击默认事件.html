@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.menu{
+			width: 200px;
+			line-height: 30px;
+			text-align: center;
+			background: #ddd;
+			border:1px solid black;
+			box-shadow: 10px 10px 10px 3px gray;
+			display: none;
+			position: absolute;
+		}
+		.menu li{
+			border-bottom: 1px dashed black;
+			list-style: none;
+		}
+		.menu li:hover{
+			background: black;
+			font-weight: bold;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li>首页</li>
+		<li>美食</li>
+		<li>美女</li>
+		<li>电影</li>
+	</ul>
+</body>
+<script type="text/javascript">
+window.onload = function(){
+	var oMenu = document.querySelector(".menu")
+
+
+	document.documentElement.oncontextmenu = function(evt){
+		var e = evt || window.event;
+
+		e.preventDefault ? e.preventDefault() : window.event.returnValue = false
+
+		var x = e.clientX;
+		var y = e.clientY;
+
+		// 设置菜单的位置
+		oMenu.style.left = x + "px"
+		oMenu.style.top = y + "px"
+		oMenu.style.display = "block"
+
+
+
+		return false
+	}
+
+
+	// 左键消失
+	document.documentElement.onclick = function(){
+		oMenu.style.display = "none"
+	}
+}
+</script>
+</html>

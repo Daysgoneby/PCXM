@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 500px;
+			height: 50px;
+			border: 1px solid red;
+			margin: 50px auto;
+		}
+		.box ul{
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+		}
+		.item{
+			width: 80px;
+			height: 50px;
+			line-height: 50px;
+			background: red;
+
+		}
+		.item a{
+			text-decoration: none;
+			margin-left: 20px;
+			/*color: white;*/
+
+		}
+		.er{
+			background: green;
+			/*display: none;*/
+			overflow: hidden;
+			height: 0px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<ul>
+		<li class="item">
+			<a href="">首页</a>
+			<div class="er">
+                <span>关于我们</span>
+                <span>关于我们</span>
+                <span>关于我们</span>
+            </div>
+		</li>
+		<li class="item">
+			<a href="">首页</a>
+		    <div class="er">
+                <span>关于我们</span>
+                <span>关于我们</span>
+                <span>关于我们</span>
+            </div>
+		</li>
+		<li class="item">
+			<a href="">首页</a>
+               <div class="er">
+                <span>关于我们</span>
+                <span>关于我们</span>
+                <span>关于我们</span>
+            </div>
+		</li>
+		<li class="item">
+			<a href="">首页</a>
+		    <div class="er">
+                <span>关于我们</span>
+                <span>关于我们</span>
+                <span>关于我们</span>
+            </div>
+		</li>
+		<li class="item">
+			<a href="">首页</a>
+			<div class="er">
+                <span>关于我们</span>
+                <span>关于我们</span>
+                <span>关于我们</span>
+            </div>
+		</li>
+	</ul>
+</div>
+</body>
+<script type="text/javascript">
+          var a=document.getElementsByClassName("item");
+          var b=document.getElementsByClassName("er");
+           //用for循环来控制每一项一级部分添加鼠标移入事件的情况
+           for(var i=0;i<a.length;i++){
+	           	//存放一级的下标
+	           	a[i].index=i;
+	           	 //给每一项添加鼠标移入事件
+	          a[i].onmouseenter=function(){
+	          	var indx=this.index;
+
+	          	b[indx].style.height="150px";
+	          	// b.style.display="block";
+	          	b[indx].style.transition="all 3s";
+
+	          }	
+	          a[i].onmouseleave=function(){
+	          	var inde=this.index;	
+	          	b[inde].style.height="0px";
+	          	b[inde].style.transition="all 3s";
+	          }
+           }
+          
+</script>
+</html>

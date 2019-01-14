@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	/*var str="gfsjhfgsg";
+	for(let i of str){
+		console.log(i);
+	}*/
+	/*var a="大海";
+	var html=`<h1>${a},大海我爱你<h1>`;
+	document.documentElement.innerHTML=html*/
+
+	/*var a=function(){
+		console.log("我是匿名函数表达式");
+	}
+	a();
+	//箭头函数
+	var b=()=>{
+	console.log("我是箭头函数");
+	}
+	b();*/
+
+
+	var obj1={
+		left:200,
+		//this指向window
+		/*move:function(){
+			setTimeout(function){
+				this.left=400;
+				console.log(this.left,this)
+			},1000)
+		}*/
+
+        //this指向obj1
+		move:function(){
+			setTimeout(()=>{
+				this.left=400;
+				console.log(this.left,this)
+			},1000)
+		}
+	}
+	obj1.move();
+
+
+	var test=()=>{
+		return({"name":"mjjmj","age":"18"});
+	}
+	console.log(test());
+
+
+
+     //解构赋值
+	var [a,b,c]=[1,2,3];
+	console.log(b);//结果为1
+
+
+	//symbol数据类型
+	var a=Symbol(1);
+	var b=Symbol(1);
+	console.log(a==b);//结果为false
+
+
+
+	//set集合   自动去重
+	var imgs=new Set();
+	imgs.add(1);
+	imgs.add(1);
+	imgs.add("1");
+	console.log(imgs);
+
+
+	//集合遍历
+	var imgs2=new Set();
+	imgs2.add(1);
+	imgs2.add(1);
+	imgs2.add("1");
+	imgs2.add("3");
+	for(let item of imgs2.keys()){
+		console.log(item);
+
+	}
+
+
+
+     //Map集合
+     var map=new Map();
+     map.set("001","哈哈1");
+     map.set("002","哈哈2");
+     console.log(map.get("001"));//结果为哈哈1
+
+
+     //遍历
+     for(let[a,b] of map){
+     	console.log(a,b);//结果哈哈1，哈哈2
+
+     }
+
+
+     //class类
+     class People{
+     	construc tor(){
+     		this.eyes="brown"
+     		this.hair="black"
+     		this.face="round"
+     	}
+     	playgame(){
+     		console.log("sdfgh")
+     	}
+     	showInfo(){
+     		console.log("dfghj");
+     	}
+     }
+     var hdh = new People();
+     hdh.playgame();
+     console.log(hdh);
+
+
+</script>
+</html>

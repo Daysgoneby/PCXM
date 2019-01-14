@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.box{
+		width: 400px;
+		height: 600px;
+		margin: 50px auto;
+		border: 1px solid black;
+		background: #EFEFEF;
+
+
+	}
+	.box-1{
+		width: 400px;
+		height: 100px;
+		justify-content: space-around;
+		margin-top: 10px;
+		display: flex;
+	}
+	.spa{
+		width: 100px;
+		height: 100px;
+		color: white;
+		background: black;
+		text-align: center;
+		font-size: 30px;
+		border: 2px solid black;
+	}
+	#box-5{
+		width: 380px;
+		height: 120px;
+		background: #DDDDDD;
+		margin: 30px auto;
+		/*line-height: 60px;*/
+
+	}
+	.p1{
+		background: red;
+
+	}
+	.active{
+		background: white;
+		color: red;
+	}
+</style>
+</head>
+<body>
+<div class="box">
+	<div class="box-1">
+		<span class="spa active">1月<br/>JAN</span>
+		<span class="spa">2月<br/>FEB</span>
+		<span class="spa">3月<br/>MAR</span>
+	</div>
+	<div class="box-1">
+		<span class="spa">4月<br/>APR</span>
+		<span class="spa">5月<br/>MAY</span>
+		<span class="spa">6月<br/>JUN</span>
+	</div>
+	<div class="box-1">
+		<span class="spa">7月<br/>JUL</span>
+		<span class="spa">8月<br/>AUG</span>
+		<span class="spa">9月<br/>SEP</span>
+	</div>
+	<div class="box-1">
+		<span class="spa">10月<br/>OCT</span>
+		<span class="spa">11月<br/>NOV</span>
+		<span class="spa">12月<br/>DEC</span>
+	</div>
+	<div id="box-5">
+		<h2 class="p1">1月</h2>
+		<h3  class="p2">正月梅花香又香</h3>		
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var arr=["正月梅花香又香","二月兰花盆里装","三月桃花连十里","四月蔷薇靠短墙","五月石榴红似火","六月荷花满池塘","七月凤仙展奇葩"," 八月桂花满枝黄"," 八月桂花满枝黄","十月芙蓉正上妆","十一月水仙供上案","十二月腊梅雪里藏"];
+		var sp=document.getElementsByTagName('span');
+		var p1=document.getElementsByClassName("p1")[0];
+		var p2=document.getElementsByClassName("p2")[0];
+
+		for(var i=0;i<sp.length;i++){
+			sp[i].index=i;
+			sp[i].onclick=function(){
+				var ind=this.index;
+				for(var j=0;j<sp.length;j++){
+					sp[j].setAttribute("class","spa")
+
+
+				}
+				sp[ind].setAttribute("class","spa active");
+				p1.innerHTML=ind+1+"月";
+				p2.innerHTML=arr[ind];
+
+
+		}
+		}
+		
+
+	}
+</script>
+</html>

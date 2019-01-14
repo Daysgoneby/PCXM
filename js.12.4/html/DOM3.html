@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul>
+	<li>asdf</li>
+	<li>zxcv</li>
+	<li>qwert</li>
+</ul>
+<button>点击</button>
+</body>
+<script type="text/javascript">
+	var btn =document.querySelector("button");
+	btn.onclick=function(){
+		var ul=document.querySelector("ul");
+		var li =document.createElement("li");
+		var con=document.createTextNode("给新增的li添加内容");
+		li.appendChild(con);
+		ul.appendChild(li);
+	}
+</script>
+</html>

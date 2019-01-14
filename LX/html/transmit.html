@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 720px;
+			height: 320px;
+			border:1px solid black;
+			margin: 50px auto;
+			padding: 10px;
+		}
+		.left{
+			width: 300px;
+			height: 300px;
+			/*background: red;*/
+			border:1px solid black;
+			float: left;
+			overflow-y: scroll;
+
+		}
+		.center{
+			width: 100px;
+			height: 300px;
+			background: #ddd;
+			border:1px solid black;
+			float: left;
+
+		}
+		.right{
+			width: 300px;
+			height: 300px;
+			float: left;
+			overflow-y: scroll;
+			border:1px solid black;
+		}
+		button{
+			width: 90px;
+			height: 20px;
+		}
+		p{
+			width: 280px;
+			height: 30px;
+			/*background: red;*/
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="left">
+		<p>我爱你1</p>
+		<p>我爱你2</p>
+		<p>我爱你3</p>
+		<p>我爱你4</p>
+		<p>我爱你5</p>
+		<p>我爱你6</p>
+	</div>
+	<div class="center">
+		<button>—></button>
+		<button>>>></button>
+		<button><—</button>
+		<button><<<</button>
+	</div>
+	<div class="right"></div>
+</div>
+</body>
+<script type="text/javascript">
+	var oP=document.querySelector("p");
+	var oRight=document.querySelector(".right");
+	var oBtn=document.querySelector("button");
+	oBtn.onclick=function(){
+		for(var i=0;i<oP.length){
+
+		}
+
+	}
+</script>
+</html>

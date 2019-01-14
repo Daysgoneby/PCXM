@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: url(../img/timg1.jpg);
+				width: 100%;
+				height: 100%;
+			}
+			.box{
+				width: 600px;
+				height: 600px;
+				/*border: 1px solid red;*/
+				/*perspective: 1000px;*/
+				margin: 50px auto;
+				transform-style: preserve-3d;
+				animation: name 20s infinite;
+			}
+			.cube{
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				top: 150px;
+				left: 150px;
+				list-style: none;
+				
+				
+			}
+			.cube li{
+				position: absolute;
+				width: 300px;
+				height: 300px;
+				font-size:100px ;
+				line-height: 300px;
+				text-align: center;
+				color: white;
+				font-weight: bold;
+			}
+			.q{
+				background: rgba(255,0,0,.6);
+			}
+			.h{
+				background: rgba(255,255,0,.6);
+				transform:translateZ(-300PX)
+			}
+			.z{
+				background:blue;
+				opacity: 0.6;
+				transform: rotateY(90deg);
+				transform-origin:left ;
+			}
+			.y{
+				background: green;
+				opacity: 0.6;
+				transform: rotateY(-90deg);
+				transform-origin: right;
+			}
+			.s{
+				background: fuchsia;
+				opacity: 0.6;
+				transform: rotateX(-90deg);
+				transform-origin: top;
+			}
+			.x{
+				background: chartreuse;
+				opacity: 0.6;
+				transform: rotateX(90deg);
+				transform-origin: bottom;
+			}
+			@keyframes name{
+				0%{
+					transform: rotateY(0deg)rotateX(0deg)rotateY(0deg);
+				}
+				100%{
+					transform: rotateY(360deg) rotateX(360deg)rotateY(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="cube">
+				<li class="q">前</li>
+				<li class="h">后</li>
+				<li class="z">左</li>
+				<li class="y">右</li>
+				<li class="s">上</li>
+				<li class="x">下</li>
+			</ul>
+		</div>
+	</body>
+</html>

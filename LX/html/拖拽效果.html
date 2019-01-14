@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+<script type="text/javascript">
+	
+	window.onload = function(){
+　　var Box=document.querySelector(".box");
+          //鼠标按下事件
+　　　　　　Box.onmousedown = function(ev){
+　　　　var oevent = ev ||window.event;
+
+　　　　var distanceX = oevent.clientX - Box.offsetLeft;
+　　　　var distanceY = oevent.clientY - Box.offsetTop;
+          //鼠标拖动事件
+　　　　document.onmousemove = function(ev){
+　　　　　　var oevent = ev ||window.event;
+　　　　　　Box.style.left = oevent.clientX - distanceX + 'px';
+　　　　　　Box.style.top = oevent.clientY - distanceY + 'px'; 
+　　　　}
+          
+          //鼠标抬起事件
+　　　　document.onmouseup = function(){
+　　　　　　document.onmousemove = null;
+　　　　　　document.onmouseup = null;
+　　　　}
+　　
+}
+}
+	
+</script>
+</html>

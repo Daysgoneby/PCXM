@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 700px;
+			height: 500px;
+			border: 1px solid black;
+
+		}
+		.selt{
+			width: 300px;
+			float: left;
+		}
+		.btn{
+			width: 100px;
+			float: left;
+		}
+		.right{
+			width: 300px;
+			float: left;
+		}
+		button{
+			width: 100px;
+			height: 20px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="box">
+	<select class="selt"  size="12" multiple>
+		<option value="">苗积</option>
+		<option value="">苗积</option>
+		<option value="">苗积</option>
+		<option value="">苗积</option>
+		<option value="">苗积</option>
+	</select>
+	<div class="btn">
+		<button class="oRight">-></button>
+		<button class="alloRight"> >>></button>
+		<button class="oLeft"><-</button>
+		<button class="alloLeft"><<<</button>
+	</div>
+	<select class="right" size="12" multiple>
+		
+	</select>
+</div>
+</body>
+<script type="text/javascript">
+	var oseLeft=document.querySelector(".selt");
+	var oseRight=document.querySelector(".right");
+	var otoRight=document.querySelector(".oRight");
+	var oallRight=document.querySelector(".alloRight");
+	var otoLeft=document.querySelector(".oLeft");
+	var oallLeft=document.querySelector(".alloLeft");
+	otoRight.onclick=function(){
+		for(var i=oseLeft.options.length-1;i>=0;i--){
+			if(oseLeft.options[i].selected){
+				oseRight.appendChild(oseLeft.options[i])
+			}
+
+		}
+	}
+	otoLeft.onclick=function(){
+		for(var j=oseRight.options.length-1;j>=0;j--){
+			if(oseRight.options[j].selected){
+				oseLeft.appendChild(oseRight.options[j])
+
+			}
+			
+		}
+	}
+	oallRight.onclick=function(){
+		for(var i=oseLeft.options.length-1;i>=0;i--){
+			oseRight.appendChild(oseLeft.options[i])
+
+		}
+	}
+	oallLeft.onclick=function(){
+		for(var j=oseRight.options.length-1;j>=0;j--){
+			oseLeft.appendChild(oseRight.options[j])
+
+		}
+	}
+</script>
+</html>

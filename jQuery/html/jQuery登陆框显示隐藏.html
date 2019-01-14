@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../jquery-1.9.0.min.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.boxmax{
+			position: relative;
+			margin: 0 auto;
+			height: auto;
+			width: 1200px;
+		}
+		.box{
+			width: 464px;
+			height: 290px;
+			margin: 0px auto;
+			position: relative;
+		
+		}
+		.box-img{
+			
+			display: none;
+		}
+		.odl{
+			width: 50px;
+			height: 50px;
+			margin: 0 auto;
+		}
+		.dl{
+			width: 100%;
+			height: 100%; 
+		}
+		.gb{
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			/*z-index: 10;*/
+			left: 438px;
+			
+		}
+		.mc{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%; 
+			background: rgba(0,0,0,0.3);
+			display: none;
+
+		}
+
+	</style>
+</head>
+<body>
+   <div class="boxmax">
+	<div class="odl">
+		<button class="dl">登陆</button>
+	</div>
+	<div class="mc"></div>
+	<div class="box">
+		<div class="box-img">
+			<button class="gb">X</button>
+			<img src="../img/timg2.jpg">
+		</div>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".gb").click(function	(){
+			$(".box-img").fadeOut(2000)
+			$(".mc").fadeOut(2000)
+
+
+		})
+		$(".dl").click(function(){
+			$(".box-img").fadeIn(2000)
+			$(".mc").fadeIn(2000)
+		})
+		})
+</script>
+</html>

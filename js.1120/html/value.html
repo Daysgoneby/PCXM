@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="tect" name="" value="输入手机号码" id="id">
+</body>
+<script type="text/javascript">
+	//获取焦点
+	var input=document.getElementById("id");
+	input.onfocus=function() {
+		input.value='';
+	}
+	//失焦
+	input.onblur=function(){
+		input.value='请输入手机号码';
+	}
+</script>
+</html>

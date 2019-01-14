@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		//预加载
+		window.onload=function(){
+				//id选择器
+		//通过id选择器拿到标签
+		var Odemo=document.getElementById("demo");
+		console.log(Odemo)
+		//给div添加点击事件   onclick鼠标单击事件
+		Odemo.onclick=function(){
+			alert(11);
+		}
+		Odemo.style.background="red";
+
+
+
+		//类选择器
+		var Class=document.getElementsByClassName("box")[1];
+		console.log(Class);
+
+
+
+		//标签选择器
+		var Tag=document.getElementsByTagName("div");
+		console.log(Tag);
+
+		//***************************
+
+
+        //获取标签
+         var txt=document.getElementById("text");
+         console.log(txt);
+
+
+
+         //获取标签的内容
+         /*var txt2=txt.innerHTML;
+         console.log(txt2);*/
+
+
+         //改变标签中的内容方法二
+         /*txt.innerHTML="石城大海";
+*/
+         /*var txt3=txt.innerText;
+         console.log(txt3);*/
+         var input=document.getElementsByClassName("input")[0].value;
+         console.log(input);
+
+		}
+	</script>
+</head>
+<body>
+<div id="demo">id选择器</div>
+<div class="box">类选择器1</div>
+<div class="box">类选择器2</div>
+<div class="box">类选择器3</div>
+<div>标签选择器</div>
+<div id="text">大海无量</div>
+<input type="text" name="" value="输入用户名">
+</body>
+</html>

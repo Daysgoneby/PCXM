@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0;
+			}
+			.box{
+				width: 700px;
+				height: 800px;
+				margin: 50px auto;
+				background: greenyellow;
+				overflow: hidden;
+			}
+			.input1{
+				width: 650px;
+				height: 250px;
+				/*background: salmon;*/
+				margin: 20px auto;
+			}
+			.input2{
+				width: 650px;
+				height: 250px;
+				/*background: darkblue;*/
+				margin: 20px auto;
+			}
+			.input3{
+				width: 650px;
+				height: 200px;
+				/*background: aqua;*/
+				margin: 20px auto;
+			}
+			.inout-1{
+				width: 400px;
+				height: 40px;
+				border: 1px solid red; 
+				margin: 20px auto;
+			}
+			.inout-1 button{
+				width: 80px;
+				height: 40px;
+				float: left;
+				border: none;
+			}
+			.inout-1 input{
+				width: 250px;
+				height: 40px;
+				border: none;
+			}
+			.inout-2 button{
+				width: 80px;
+				height: 40px;
+				float: left;
+				border: none;
+			}
+			.inout-2 input{
+				width: 250px;
+				height: 40px;
+				border: none;
+			}
+			.ka{
+				width: 600px;
+				height: 200px;
+				border: 1px solid red;
+				margin: 30px auto;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="input1">
+				<p>Step1:用户详细资料</p>
+				<form class="inout-1">
+					<button>用户名称：</button>
+					<input type="text" placeholder="请输入用户名" />
+				</form>
+				<form class="inout-1">
+					<button>邮件地址：</button>
+					<input type="text" placeholder="1311272713@qq.com" />
+				</form>
+				<form class="inout-1">
+					<button>联系电话：</button>
+					<input type="text" placeholder="0852-8888" />
+				</form>
+			</div>
+			<div class="input2">
+				<p>Step1:家庭住址</p>
+				<form class="inout-1">
+					<button>详细地址：</button>
+					<input type="text"  />
+				</form>
+				<form class="inout-1">
+					<button>邮件编码：</button>
+					<input type="text"  />
+				</form>
+				<form class="inout-1">
+					<button>国家：</button>
+					<input type="text"  />
+				</form>
+				
+			</div>
+			<div class="input3">
+				<p>Step1:付款方式</p>
+				<div class="ka">
+				<p>信用卡类型</p>
+				<input type="checkbox" />中国工商银行
+				<input type="checkbox" />中国人民银行
+				<input type="checkbox" />中国建设银行
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

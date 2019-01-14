@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<div>
+	<p></p>
+</div>
+</body>
+<script type="text/javascript">
+	var div=document.querySelector("div");
+	var p=document.querySelector("p");
+	//自己删自己
+	//div.parentNode.removeChild(div);
+	//父级删子级
+	div.removeChild(p);
+	
+</script>
+</html>

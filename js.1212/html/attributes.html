@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<div class="box" id="div" title="你放上去可以显示内容">
+	<span>1</span>
+	<span>2</span>
+	<span>3</span>
+	<span>4</span>
+	<span>5</span>
+</div>
+</body>
+<script type="text/javascript">
+	var obox=document.querySelector(".box");
+	/*var obox=document.getElementById('.box');*///返回属性节点个数
+
+	var atter=obox.attributes;
+	var atter1=obox.attributes.length;
+	var atter2=obox.attributes[0];
+	var atter3=obox.attributes[0].nodeType;
+	var atter4=obox.attributes['id'];
+	var atter5=obox.attributes.getNamedItem('id');
+	console.log(atter);
+	console.log(atter1);
+	console.log(atter2);
+	console.log(atter3);
+	console.log(atter4);
+	console.log(atter5);
+
+
+</script>
+</html>

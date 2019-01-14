@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 400px;
+			height: 600px;
+			margin: 10px auto;
+			background: #eee;
+			border: 1px solid black;
+		}
+		
+		.box-ul{
+			width: 400px;
+			height: 400px;
+			list-style: none;
+			
+		}
+		.item{
+			
+			width: 88px;
+			height: 80px;
+			margin: 10px 20px ;
+			float: left;
+			border:1px solid red;
+			background: black;
+			color: white;
+			text-align: center;
+			font-size: 25px;
+			line-height: 40px;
+			cursor: pointer;
+			box-sizing: border-box;
+		}
+		.info{
+			margin: 20px;
+			padding: 10px;
+			width: 340px;
+			height: 140px;
+			background: #ddd;
+		}
+		.month{
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.tip{
+			height: 40px;
+			font-size: 20px;
+		}
+		.active{
+			background: white;
+			color: red;
+			font-weight: bold;
+			border: 1px solid black;
+			list-style: none;
+
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<ul class ="box-ul">
+		<li class="item active">
+			<p>1月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>2月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>3月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>4月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>5月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>6月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>7月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>8月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>9月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>10月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>11月</p>
+			<p>JAN</p>
+		</li>
+		<li class="item">
+			<p>12月</p>
+			<p>JAN</p>
+		</li>
+	</ul>
+	<div class="info">
+		<p class="month">1月</p>
+		<p class="tip">正月梅花香又香1</p>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	var arr=["正月梅花香又香1","正月梅花香又香2","正月梅花香又香3","正月梅花香又香4","正月梅花香又香5","正月梅花香又香6","正月梅花香又香7","正月梅花香又香8","正月梅花香又香9","正月梅花香又香10","正月梅花香又香11","正月梅花香又香12",]
+	var item=document.querySelectorAll(".item");
+	var month=document.querySelector(".month");
+	var tip=document.querySelector(".tip");
+	for(let i=0;i<item.length;i++){
+		/*item[i].index=i;*/
+		item[i].onclick=function(){
+			/*var ind =this.index;*/
+			//清除1月份active的样式
+			for(let j=0;j<item.length;j++){
+				item[j].setAttribute("class","item")
+
+			}
+			//给当前点击的月份添加样式
+			item[i].setAttribute("class","item active");
+			//改变显示区域的月份
+			month.innerHTML=i+1+"月";
+			tip.innerHTML=arr[i];
+
+		}
+
+	}
+
+</script>
+</html>

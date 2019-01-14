@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 300px;
+				height: 300px;
+				background: salmon;
+				/*方式一*/
+				/*position: fixed;
+				top: 50%;
+				left: 50%;
+				margin-top: -150px;
+				margin-left: -150px;*/
+				/*方式二*/
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="">
+		*{
+			padding: 0;
+			margin: 0;
+					}
+		#box{
+			width: 500px;
+			height: 40px;
+			margin: 100px auto;
+			border-radius: 20px 20px 20px 20px;
+			border:2px solid black;
+			overflow: hidden;
+			position: relative;
+
+		}
+		#gao{
+			width: 0px;
+			height: 100%;
+			border-radius: 20px;
+			background: red;
+		}
+		#num{
+			position: absolute;
+			top: 0px;
+			left: 50%;
+			line-height: 40px;
+		}
+	</style>
+</head>
+<body>
+<div id="box">
+	<div id="gao"></div>
+	<span id="num">0%</span>
+</div>
+</body>
+<script type="">
+	var ow=document.getElementById("box");
+	var gao=document.getElementById("gao");
+	var num1=document.getElementById("num");
+	function ch(){
+		var wid=0;
+		var time=setInterval(function(){
+			wid++;
+			gao.style.width=wid+"px";
+			if (wid>=ow.offsetWidth-2) {
+				clearInterval(time);
+			}
+			var b=Math.round((gao.offsetWidth/ow.offsetWidth)*100);
+			num1.innerHTML=b+"%";
+
+			},20)
+	}
+	ch();
+</script>
+</html>

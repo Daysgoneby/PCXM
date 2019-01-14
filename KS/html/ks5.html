@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 415px;
+			height: 455px;
+			margin: 0 auto;
+			background: #fff;
+		}
+		#show{
+			width: 100%;
+			height: 200px;
+			text-align: right;
+			background: black;
+			color: white;
+		}
+		input{
+			height: 50px;
+			width: 100px;
+			font-size: 20px;	
+		}
+		.bb{
+			background: orange;
+		}
+		.aa{
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<input type="text" name="" id="show">
+	<input type="button" name="" value="AC" class="aa">
+	<input type="button" name="" value="←">
+	<input type="button" name="" value="+/-">
+	<input type="button" name="" value="÷">
+	<input type="button" name="" value="7">
+	<input type="button" name="" value="8">
+	<input type="button" name="" value="9">
+	<input type="button" name="" value="*">
+	<input type="button" name="" value="4">
+	<input type="button" name="" value="5">
+	<input type="button" name="" value="6">
+	<input type="button" name="" value="-">
+	<input type="button" name="" value="1">
+	<input type="button" name="" value="2">
+	<input type="button" name="" value="3">
+	<input type="button" name="" value="+">
+	<input type="button" name="" value="0" style="width: 204px;">
+	<input type="button" name="" value=".">
+	<input type="button" name="" value="=" class="bb">
+</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var btn=document.getElementsByTagName('input');
+		var show=document.getElementById('show');
+		for (var i =1; i <btn.length; i++) {
+			btn[i].onclick=function(){
+				cal(this.value);
+			}
+		}
+		function cal(val){
+	
+			switch(val){
+				case"=":
+				show.value= eval(show.value);
+				break;
+				case"AC":
+				show.value=" ";
+				break;
+				default:
+				show.value=show.value+val;
+                break;
+			}
+		}
+	}
+</script>
+</html>

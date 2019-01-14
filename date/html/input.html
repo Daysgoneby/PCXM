@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			/*IE浏览器*/
+			input:-ms-input-placeholder{
+				color: red;
+				font-weight: 400;
+				
+			}
+			/*谷歌浏览器*/
+			input::-webkit-input-placeholder{
+				color: saddlebrown;
+				font-weight: 400;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" autocomplete="on">
+			用户名：
+			<input type="text"placeholder="请输入用户名" autofocus="autofocus" required="required" autocomplete="off"name="usr"/>
+			<br/>
+			密码：
+			<input type="password" placeholder="请输入密码"/>
+			<br/>
+			邮箱：
+			<input type="email"/>
+			<br/>
+			列表：
+			<input list="add"name="usr"/>
+			<datalist id="add">
+				
+				<option value="遵义"></option>
+				<option value="务川"></option>
+				<option value="黄都"></option>
+				<option value="贵阳"></option>
+			</datalist>
+			<br/>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>

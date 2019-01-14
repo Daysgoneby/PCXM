@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 750px;
+			height: 50px;
+			margin: 10px auto;
+			border:1px solid black;
+			line-height: 50px;
+		}
+		
+	</style>
+</head>
+<body>
+<div class="box">
+	性名：<input type="text" name="" class="inp1">
+	联系方式：<input type="text" name="" class="inp2">
+	年龄：<input type="text" name="" class="inp3">
+	<button class="btn1">添加用户</button>
+</div>
+<div class="box2">
+	<table border="1" style="margin: 0 auto;width: 300px;" cellspacing="0" cellpadding="10px">
+		<tr style="height: 30px;text-align: center;">
+			<td>性名</td>
+			<td>联络方式</td>
+			<td>年龄</td>
+			<td>操作</td>
+		</tr>
+		<tr style="height: 30px;text-align: center;">
+			<td>习近平</td>
+			<td>18685544892</td>
+			<td>15</td>
+			<td><button class="btn2" style="width: 50px;">删除</button></td>
+		</tr>
+	</table>
+</div>
+</body>
+<script type="text/javascript">
+	var oinp1=document.querySelector(".inp1");
+	var oinp2=document.querySelector(".inp2");
+	var oinp3=document.querySelector(".inp3");
+	var obtn1=document.querySelector(".btn1");
+	var obtn2=document.querySelector(".btn2");
+	btn1.onclick=function(){
+		var val=oinp1.value;
+		var val2=oinp2.value;
+		var val3=oinp3.value;
+		var oval=document.createElement("td");
+		oval.innerHTML=val;
+		var oval2=document.createElement("td");
+		oval2.innerHTML=val;
+		var oval3=document.createElement("td");
+		oval3.innerHTML=val;
+	}
+
+	
+</script>
+</html>

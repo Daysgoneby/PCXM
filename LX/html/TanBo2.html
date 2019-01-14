@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 900px;
+			height: 600px;
+			margin: 20px auto;
+			border:1px solid black;
+		}
+		.menu{
+			width:900px;
+			height: 50px;
+			border-bottom: 1px solid black;
+		}
+		.menu li{
+			list-style: none;
+			width: 150px;
+			height: 50px;
+			float: left;
+			text-align: center;
+			line-height: 50px;
+		}
+		.menu .current{
+			background: black;
+			color: white;
+			font-weight: bold;
+		}
+
+		.content{
+			width: 900px;
+			height: 549px;
+		}
+		.content div{
+			width: 900px;
+			height: 549px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="menu">
+			<li class="current">新闻</li>
+			<li>财经</li>
+			<li>电视</li>
+			<li>电影</li>
+			<li>动漫</li>
+			<li>购物</li>
+		</ul>
+		<div class="content">
+			<div  style="display: block;">
+				<h1>新闻</h1>
+				今夜遵义市桐梓县楚米镇的杨总要请我们吃饭
+			</div>
+			<div>
+				<h1>财经</h1>
+				马云挣了很多钱
+			</div>
+			<div>
+				<h1>电视</h1>
+				甄嬛传
+			</div>
+			<div>
+				<h1>电影</h1>
+				三傻大闹宝莱坞
+			</div>
+			<div>
+				<h1>动漫</h1>
+				犬夜叉
+			</div>
+			<div>
+				<h1>购物</h1>
+				双12买买买
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var oBtns = document.querySelectorAll(".menu li");
+	var oSecond = document.querySelectorAll(".content div");
+	for( let i = 0 ; i < oBtns.length ; i++ ){
+		oBtns[i].onclick = function(){
+			for( let j = 0 ; j < oBtns.length ; j++ ){
+				oBtns[j].className = ""
+				oSecond[j].style.display = "none"
+			}
+			this.className = "current"
+			oSecond[i].style.display="block"
+		}
+	}
+</script>
+</html>

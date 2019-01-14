@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	//编程计算计算1+2！+3!+...+20!
+	function fun(i){
+		if(i==1){
+			return i;
+		}else{
+		
+		return (i+fun(i - 1));
+		}
+	}
+	console.log(fun(20));
+</script>
+</html>

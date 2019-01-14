@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 1000px;
+			height: 500px;
+			border: 1px solid black;
+			margin: 20px auto;
+		}
+		.img1{
+			width: 480px;
+			height: 313px;
+			border: 1px solid black;
+			float: left;
+			position: relative;
+		}
+		.img2{
+			width: 480px;
+			height: 313px;
+			border: 1px solid black;
+			float: right;
+		}
+		.img1 img{
+			width: 480px;
+			height: 313px;
+		}
+		.img2 img{
+			width: 480px;
+			height: 313px;
+		}
+		.sk{
+			width: 50px;
+			height: 50px;
+			background: black;
+			position: absolute;
+			top: 0px;
+			opacity: 0.4;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="img1">
+		<div class="sk"></div>
+		<img src="../img/mv.jpg">
+		
+	</div>
+	<div class="img2">
+		<img src="../img/mv.jpg">
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+	var oimg1=document.querySelector(".img1");
+	var oimg12=document.querySelector(".img2");
+	var osk=document.querySelector(".sk");
+	osk.onmouseenter=function(evt){
+		var oevent = evt ||window.event;
+			var distanceX = oevent.clientX - osk.offsetLeft;
+　　　　     var distanceY = oevent.clientY - osk.offsetTop;
+		oimg1.onmousemove=function(evt1){
+			var oevent = evt1 ||window.event;
+　　　　　　osk.style.left = oevent.clientX - distanceX + 'px';
+　　　　　　osk.style.top = oevent.clientY - distanceY+ 'px'; 
+			
+
+	}
+		
+	}
+	
+}
+</script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.zf{
+				perspective: 800px;
+			}
+			
+			.box{
+				width: 200px;
+				height: 200px;
+				margin: 200px auto;
+				transform-style: preserve-3d;
+				position: relative;
+			}
+			
+			.box div{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				opacity: 0.8;
+				
+			}
+			.box1{
+				background: red;
+				transform: translateZ(100px);
+				
+			}
+			.box2{
+				background: yellow;
+				transform: translateZ(-100px);
+			}
+			.box3{
+			left: 100px;
+			background: black;
+			transform: rotateY(90deg);
+			perspective-origin: right;
+			animation: name1 20s infinite;
+			}
+			.box4{
+				left: -100px;
+				background: blue;
+				transform: rotateY(-90deg);
+				perspective-origin: left;
+			}
+			.box5{
+				top: 0px;
+				background: palegreen;
+				transform: rotateX(90deg);
+				transform-origin: top;
+				transform: translateZ(-100px);
+			}
+			.box6{
+				top: 100px;
+				background: palevioletred;
+				transform: rotateX(-90deg);
+				perspective-origin: bottom;
+			}
+			.box:hover{
+			
+			transform: rotateY(3600deg)rotateX(3600deg);
+			transition: all 10s;
+			}
+			/*@keyframes name1{
+				0%{
+					transform: rotateY(90deg);
+					
+				}
+				50%{
+					transform: rotateY(180deg);
+				}
+				100%{
+					transform: rotateY(360deg);
+				}
+				
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="zf">
+		<div class="box">
+		<div class="box1">前</div>
+		<div class="box2">后</div>
+		<div class="box3">左</div>
+		<div class="box4">右</div>
+		<div class="box5">上</div>
+		<div class="box6">下</div>
+		</div>
+		</div>
+	</body>
+</html>

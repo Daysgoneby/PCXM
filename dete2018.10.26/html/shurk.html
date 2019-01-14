@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.input{
+				width: 400px;
+				height: 40px;
+				border: 1px solid black;
+				margin: 50px auto;
+			}
+			.input input{
+				width: 300px;
+				height: 40px;
+				/*去除输入边框线*/
+				border: none;
+				float: left;
+				/*去除输入时的范围线*/
+				outline: none;
+			}
+			.but{
+				widows: 100px;
+				height: 40px;
+				display: block;
+				/*float: left;*/
+				background: sandybrown;
+				text-align: center;
+				line-height: 40px;
+				/*设置鼠标样式为小手*/
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="input">
+			<input type="text"/>
+			<span class="but">百度一下</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 1348px;
+			height: 490px;
+			border: 1px solid black;
+			margin: 0 auto;
+
+		}
+		.box img{
+			width: 100%;
+			height: 100%;
+		}
+		.img{
+			width: 1200px;
+			height: 260px;
+			border: 1px solid black;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.img div{
+			width: 200px;
+			height: 260px;
+			float: left;
+			overflow: hidden;
+			transition: all 2s;
+			position: relative;
+		}
+		span{
+			display: block;
+			text-align: center;
+			position: absolute;
+			width: 200px;
+			height: 260px;
+			font-size: 26px;
+			top: 0;
+			left: 0;
+			color: #fff;
+			background: rgba(0,0,0,.4);
+
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<img src="../img/top.png">
+</div>
+<div class="img">
+	<div><span>原<br>谅<br>酒<br>店</span><img src="../img/1.jpg"></div>
+	<div><span>设<br>计<br>师<br>酒<br>店</span><img src="../img/2.jpg"></div>
+	<div><span>青<br>年<br>旅<br>社</span><img src="../img/3.jpg"></div>
+	<div><span>特<br>色<br>客<br>栈</span><img src="../img/4.jpg"></div>
+	<div><span>海<br>岛<br>酒<br>店</span><img src="../img/5.jpg"></div>
+	<div><span>海<br>外<br>温<br>泉</span><img src="../img/6.jpg"></div>
+</div>
+</body>
+<script type="text/javascript">
+	var oImg=document.querySelectorAll(".img div");
+	var oSpan=document.querySelectorAll("span");
+	for(let i=0;i<oImg.length;i++){
+		oImg[i].onmouseover=function(){
+			for(let j=0;j<oImg.length;j++){
+				oImg[j].style.width=160+"px";
+
+			}
+			oImg[i].style.width=400+"px";
+			oSpan[i].style.display="none";
+		}
+
+	}
+	for(let i=0;i<oImg.length;i++){
+		oImg[i].onmouseout=function(){
+			for(let j=0;j<oImg.length;j++){
+				oImg[j].style.width=200+"px";
+
+			}
+			oImg[i].style.width=200+"px";
+			oSpan[i].style.display="block"
+		}
+
+
+	}
+
+
+</script>
+</html>

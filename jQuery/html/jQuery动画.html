@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+		<script type="text/javascript" src="../jquery-1.9.0.min.js"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 1200px;
+				height: 600px;
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+			.oimg{
+				width: 500px;	
+			}
+			.oimg img{
+				width: 100%;
+			}
+		</style>
+</head>
+<body>
+<div class="box">
+	<div>
+		<button class="xs">显示</button>
+		<button class="yc">隐藏</button>
+		<button class="xc">显示/隐藏</button>
+		<button class="hr">划入</button>
+		<button class="hc">划出</button>
+		<button class="hcr">划入/划出</button>
+		<button class="dr">淡入</button>
+		<button class="dc">淡出</button>
+		<button class="dcr">淡入/淡出</button>
+	</div>
+	<div class="oimg">
+		<img src="../img/timg.jpg">
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	//预加载    当全部资源加载完毕后执行
+	$(function(){
+		$(".yc").click(function	(){
+			$(".oimg").hide(2000)//hide是隐藏的方法，2000（自定义的）指的是时间
+
+		})
+		$(".xs").click(function(){
+			$(".oimg").show(2000)//show是显示的方法，2000（自定义的）指的是时间
+		})
+		$(".xc").click(function(){
+			$(".oimg").toggle(2000)//toggl是显示和隐藏的方法，2000（自定义的）指的是时间
+		})
+		$(".hr").click(function(){
+			$(".oimg").slideDown(2000)//slideDown是划入的方法，2000（自定义的）指的是时间
+		})
+		$(".hc").click(function(){
+			$(".oimg").slideUp(2000)//slideUp是划出的方法，2000（自定义的）指的是时间
+		})
+		$(".hcr").click(function(){
+			$(".oimg").slideToggle(2000)//slideUp是划出和划出的方法，2000（自定义的）指的是时间
+		})
+		$(".dr").click(function(){
+			$(".oimg").fadeIn(2000)//fadeln是淡入的方法，2000（自定义的）指的是时间
+		})
+		$(".dc").click(function(){
+			$(".oimg").fadeOut(2000)//fadeln是淡出的方法，2000（自定义的）指的是时间
+		})
+		$(".dcr").click(function(){
+			$(".oimg").fadeToggle(2000)//fadeln是淡入和淡出的方法，2000（自定义的）指的是时间
+		})
+	})
+
+	
+
+	//仅仅当结构当加载完毕执行
+	/*$(document).ready()
+
+
+</script>
+</html>

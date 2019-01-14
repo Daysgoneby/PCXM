@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 714px;
+			height: 800px;
+			margin: 50px auto;
+			border: 1px solid black;
+		}
+		.box-1{
+			width: 100%;
+			height: 80px;
+			position: relative;
+			/*border: 1px solid black;*/
+		}
+		.box-1 ul{
+			list-style: none;
+
+
+		}
+		.box-1 ul li{
+			width: 100px;
+			height: 80px;
+			border: 1px solid black;
+			float: left;
+			text-align: center;
+			line-height: 80px;
+
+		}
+		.box-1 ul li a{
+			text-decoration: none;
+			font-size: 25px;
+
+		}
+		.mj{
+			width: 714px;
+			height: 720px;
+			position: absolute;
+			top: 80px;
+			left: 0;
+			display: none;
+		}
+	</style>
+
+</head>
+<body>
+<div class="box">
+	<div class="box-1">
+	<ul>
+		<li style="background:red ">
+			<a >新闻</a>
+			<div class="mj" style="display: block;">
+			<h1>新闻</h1>
+		   </div>
+		</li>
+		<li>
+			<a >音乐</a>
+			<div class="mj">
+				<h1>音乐</h1>
+			</div>
+		</li>
+		<li>
+			<a >电影</a>
+			<div class="mj">
+				<h1>电影</h1>
+			</div>
+		</li>
+		<li>
+			<a >购物</a>
+			<div class="mj">
+				<h1>购物</h1>
+			</div>
+		</li>
+		<li>
+			<a >股市</a>
+			<div class="mj">
+				<h1>股市</h1>
+			</div>
+		</li>
+		<li>
+			<a >趣味</a>
+			<div class="mj">
+				<h1>趣味</h1>
+			</div>
+		</li>
+		<li>
+			<a >只有六项</a>
+			<div class="mj"></div>
+		</li>
+	</ul>
+	</div>
+</div>
+</body>
+<script type="">
+	var oLi=document.querySelectorAll(".box-1 ul li");
+	var oMj=document.querySelectorAll(".mj");
+	for(let i=0;i<oLi.length;i++){
+		oLi[i].onclick=function(){
+			for(let j=0;j<oMj.length;j++){
+
+				oMj[j].style.display="none";
+				oLi[j].style.background="none";
+
+			}
+			oMj[i].style.display="block";
+			oLi[i].style.background="red";
+
+
+		}
+
+	}
+</script>
+</html>

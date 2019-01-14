@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 500px;
+			height: 600px;
+			border:1px solid black;
+			margin: 50px auto;
+			padding: 10px;
+		}
+		.sc{
+			width: 500px;
+			height: 300px;
+			border: 1px solid red;
+			overflow-y: scroll;
+		}
+		.in{
+			width: 500px;
+			height: 150px;
+			font-size: 30px;
+			margin-top: 10px;
+			resize: none;
+		}
+		.btn{
+			width: 100px;
+			height: 50px;
+			float: right;
+		}
+		.item{
+			overflow: hidden;
+			margin: 10px;
+		}
+		.item span{
+			padding: 5px;
+			border-radius: 5px;
+		}
+		.item .lt{
+			float: left;
+			background: #ddd;
+		}
+		.item .rt{
+			float: right;
+			background: pink;
+			max-width: 400px;
+
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<ul class="sc">
+		<li class="item">
+			<span class="lt">在吗</span>
+		</li>
+		<li class="item">
+			<span class="lt">在不吗</span>
+		</li>
+		<li class="item">
+			<span class="lt">到底在不</span>
+		</li>
+		<li class="item">
+			<span class="lt">说话</span>
+		</li>
+		<li class="item">
+			<span class="rt">在吗</span>
+		</li>
+		<li class="item">
+			<span class="rt">在不吗</span>
+		</li>
+		<li class="item">
+			<span class="rt"> 到底在不</span>
+		</li>
+		<li class="item">
+			<span class="rt">说话</span>
+		</li>
+
+	</ul>
+	<textarea class="in"></textarea>
+	<button class="btn">发送</button>
+</div>
+</body>
+<script type="text/javascript">
+	var oBtn=document.querySelector(".btn");
+	var oIn=document.querySelector(".in");
+	var oSc=document.querySelector(".sc");
+	function show(){
+		var val=oIn.value;
+		 if(val!=""){
+			//创建一个span
+			var oSp=document.createElement("span");
+			//将输入的内容添加到span
+			oSp.innerHTML=val;
+			//给span设置class
+			oSp.setAttribute("class","rt");
+			//创建li标签
+			var oLi=document.createElement("li");
+			oLi.setAttribute("class","item");
+			//将li追加到ul中
+			oLi.appendChild(oSp);
+			oSc.appendChild(oLi);
+			oIn.value = "";
+		  // 滚动至当前视窗
+		  oLi.scrollIntoView();
+		  }
+	 
+      }
+	//给按钮添加点击事件
+
+	oBtn.onclick=function(){
+		show()
+	}
+	oIn.onkeydown=function(evt){
+		var e=evt||window.event;
+		if(e.keyCode==13&& e.ctrlKey){
+
+		
+      show();
+
+	}
+	}
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#code{
+			font-weight: bold;
+			color: red;
+			border:none;
+			outline: none;
+
+		}
+
+	</style>
+</head>
+<body>
+<input type="text" name="" id="input">
+<input type="button" id="code" onclick="crete()" name="">
+<input type="button" name="" id="button" value="验证">
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var yzm;
+		crete();
+		var code=document.getElementById('code');
+			code.onclick=function(){
+				crete();
+			}
+			var button=document.getElementById("button");
+			button.onclick=function(){
+				validate();
+			}
+		function crete(){
+			yzm="";
+			 var code=document.getElementById('code');
+			var arr=["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m","A","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M","0","1","2","3","4","5","6","7","8","9"];
+			for(var i=0; i<4;i++){
+				//随机获取arr数组的元素的下标
+				var index=Math.floor(Math.random()*arr.length);
+				//
+				yzm+=arr[index];
+
+			}
+			code.value=yzm;
+
+		}
+		//校验验证码
+		function validate(){
+			var input=document.getElementById('input').value.toUpperCase();
+			//获取输入框
+			var in1=document.getElementById('input');
+			 yzm=yzm.toUpperCase();
+			if (input.length<=0) {
+				alert("请输入验证码");
+				//给输入框聚焦
+				in1.focus();
+			}else if (input!=yzm) {
+				alert("验证有误！");
+				crete();
+				in1.value="";
+				in1.focus();
+			}else{
+				alert("通过验证");
+			}
+		}
+		
+	}
+</script>
+</html>

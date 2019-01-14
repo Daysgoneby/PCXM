@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			/*鼠标悬停*/
+			/*伪类：意义，给css样式添加特殊的效果*/
+			.box:hover{
+				background: yellow;
+				color: red;
+			}
+			/*激活状态*/
+			.box1:active{
+				background: blue;
+			}
+			/*初始状态*/
+			.box2:link{
+				background: fuchsia;
+			}
+			/*访问后的状态*/
+			.box3:visited{
+				background: chartreuse;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="" class="box">鼠标悬停</a>
+		<a href="" class="box1">激活状态</a>
+		<a href="" class="box2">初始状态</a>
+		<a href="" class="box3">访问后状态</a>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+	/*//最大值
+	console.log(Math.max(1,2,3,45));
+	//最小值
+	console.log(Math.min(1,2,3,45));
+	//向上取整
+	var a=8.6;
+	console.log(Math.ceil(a));
+	//向下取整
+	var b=8.5;
+	console.log(Math.floor(b));
+	//开根号
+	console.log(Math.sqrt(1));
+	//绝对值
+	console.log(Math.abs(1));*/
+	
+		/*var arr=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];*/
+		function rancolor(){
+		var arr=document.getElementsByTagName("body")[0];
+		var b=parseInt(Math.random()*9+0);
+	    var c=parseInt(Math.random()*9+0);
+	    var d=parseInt(Math.random()*9+0);
+	    var e=parseInt(Math.random()*9+0);
+	    var f=parseInt(Math.random()*9+0);
+	    var g=parseInt(Math.random()*9+0);
+	    var a="#";
+	    arr.style.background=a+b+c+d+e+f+g;
+	      }
+	    var arr=document.getElementsByTagName("body")[0];
+	    arr.onclick=function(){
+	      	 arr.style.background=rancolor();
+	      }
+</script>
+</html>

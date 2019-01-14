@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	//数组去重
+	window.onload=function(){
+		var a=[1,1,1,2,2,2,3,3,33,4,4,4,4];
+		var b=[];
+		for(i=0; i<a.length;i++){
+				if (b.indexOf(a[i])==-1) {
+					b.push(a[i]);
+				}
+			}
+		console.log(b);
+	}
+</script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 400px;
+			height: 400px;
+			border: 1px solid black;
+			margin: 20px auto;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+   <h1>请选择你的爱好：</h1>
+        <input type="checkbox" name="" class="inpt">全选/全不选<br>
+        <input type="checkbox" name="" class="inp">足球
+        <input type="checkbox" name="" class="inp">篮球
+        <input type="checkbox" name="" class="inp">兵乓球
+        <input type="checkbox" name="" class="inp">排球
+        <br>
+        <input type="button" value="全 选" class="but1">
+        <input type="button" value="全不选" class="but2">
+        <input type="button" value="反选" class="but3">
+    </div>
+</body>
+<script type="text/javascript">
+	var oInpt=document.querySelector(".inpt");
+	var oInp=document.querySelectorAll(".inp");
+	var oBut1=document.querySelector(".but1");
+	var oBut2=document.querySelector(".but2");
+	var oBut3=document.querySelector(".but3");
+	//全选
+	oBut1.onclick=function(){
+		for(let i=0;i<oInp.length;i++){
+			/*oInp[i].setAttribute("checked","checked");*/
+			oInp[i].checked="checked";
+
+		}
+	}
+	//全不选
+	oBut2.onclick=function(){
+		for(let i=0;i<oInp.length;i++){
+			oInp[i].checked="";
+
+		}
+	}
+	//反选
+	oBut3.onclick=function(){
+		for(let i=0;i<oInp.length;i++){
+			if(oInp[i].checked==""){
+				oInp[i].checked="checked";
+			}else{
+				oInp[i].checked="";
+			}
+
+		}
+	}
+	oInpt.onclick=function(){
+		for(let i=0;i<oInp.length;i++){
+			if(oInp[i].checked==""){
+				oInp[i].checked="checked";
+			}else{
+				oInp[i].checked="";
+           }
+		}
+	}
+</script>
+</html>

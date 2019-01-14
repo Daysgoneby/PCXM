@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 300px;
+			height: 200px;
+			border:1px solid red;
+			margin: 20px auto;
+		}
+		#yzm{
+			width: 50px;
+			height: 50px;
+		}
+		#inp{
+			width: 180px;
+			height: 50px;
+		}
+		#btn{
+			width: 50px;
+			height: 50px;
+		}
+		#tip{
+			display: none;
+
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<input type="text" name="" value="ABcd" disabled="disabled" id="yzm">
+	<input type="text" name="" id="inp" placeholder="请输入验证码，不区分大小写">
+	<button id="btn">验证码</button>
+	<p id="tip">验证码有误</p>
+</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+	var yzm=document.getElementById('yzm').value.toUpperCase();
+	var in1=document.getElementById("inp");
+	var btn=document.getElementById("btn");
+	var tip=document.getElementById("tip");
+	btn.onclick=function(){
+		var val=in1.value.toUpperCase();
+		console.log(val);
+		if (val==yzm) {
+			tip.style.display="block";
+			tip.style.color="green";
+			tip.innerHTML="通过验证";
+			}
+			else{
+			tip.style.display="block";
+			tip.style.color="red";
+			tip.innerHTML="输入有误";
+			inp.value="";
+			inp.focus();
+			
+		}
+	}
+	
+
+
+     }
+</script>
+</html>

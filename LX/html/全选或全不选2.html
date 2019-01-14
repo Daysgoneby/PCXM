@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>请选择您的爱好：</h1>
+<input type="checkbox" onchange="checkOrUncheck(this)"/>全选/全不选<br />
+<input type="checkbox" name="hobby" />足球
+<input type="checkbox" name="hobby" />篮球
+<input type="checkbox" name="hobby" />游泳
+<input type="checkbox" name="hobby" />唱歌 <br />
+<input type="button" value="全 选" onclick="allCheck()"/>
+<input type="button" value="全不选" onclick="allUncheck()"/>
+<input type="button" value="反选" onclick="reverseCheck()"/>
+</body>
+<script type="text/javascript">
+var checkboxes = document.getElementsByName("hobby");
+//全选
+function allCheck(){
+    for(var i = 0;i < checkboxes.length;i ++){
+        checkboxes[i].checked = true;
+    }
+}
+//全不选
+function allUncheck(){
+    for(var i = 0;i < checkboxes.length;i ++){
+        checkboxes[i].checked = false;
+    }
+}
+//反选
+function reverseCheck(){
+    for(var i = 0;i < checkboxes.length;i ++){
+        checkboxes[i].checked = !checkboxes[i].checked;
+    }
+}
+//全选/全不选
+function checkOrUncheck(obj){
+    if(obj.checked){
+        allCheck();
+    }else{
+        allUncheck();
+    }
+}
+</script>
+<ml>

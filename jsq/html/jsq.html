@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		window.onload=function(){
+
+			// Obox.onclick=function(){
+			// var txt=document.getElementById("vall").value;
+			// var txt=vall.innerHTML;
+			// var txt1=document.getElementById("vall2").value;
+			// var txt=vall2.innerHTML;
+			// var txt2=document.getElementsByTagName("select")[0].value;
+			// var txt=vall3.innerHTML;
+   //      }
+   //      vall.onclick=function(){
+
+   //      }
+   			var b=document.getElementById("btn");
+   			b.onclick=function(){
+   				// alert(11)
+   				var val111=document.getElementById("vall").value;
+   				var val222=document.getElementById("vall2").value;
+   				var val1=Number(val111);
+   				var val2=Number(val222);
+   				var sym=document.getElementById("symbol").value;
+   				var r=0;
+   				switch(sym){
+   					case "+":r=val1+val2;break;
+   					case "-":r=val1-val2;break;
+   					case "*":r=val1*val2;break;
+   					case "/":r=val1/val2;break;
+   					case "%":r=val1%val2;break;
+   				
+   				}
+   				document.getElementById("res").value=r;
+   			}
+        
+		}
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			margin: 100px 300px;
+		}
+        
+	</style>
+</head>
+<body>
+<div class="box">
+	<input type="text" id="vall" name="">
+	<select id="symbol">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input type="text" id="vall2" name="">=
+	<input type="text" id="res" name="">
+	<button id="btn">计算</button>
+</div>
+</body>
+</html>

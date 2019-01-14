@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<button>点击相加</button>
+<p></p>
+</body>
+<script type="text/javascript">
+	/*var a=[1,2,3];
+	var b=[4,5,6,7];
+	var c=a.concat(b);
+	document.write(c);*/
+
+	//for in循环，用在json类型
+	/*var a=[1,2,3,4,5];
+	for(var i in a)
+		console.log(a[i]);*/
+
+
+	/*var arr=[2,3,4,"ac","b",6,2];
+	var b=arr.indexOf("b");
+	console.log(b);*/
+	
+     // function xj(xj){
+	var arr=[5,8,4,5,2,1];
+	// var sum=0;
+	arr.forEach(function(val){
+		arr=arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]
+		/*console.log(arr);*/
+		// sum=arr;
+		console.log(arr);
+	})
+
+	// return arr;
+	// }
+	var button=document.getElementsByTagName('button');
+	var p1=document.getElementsByTagName('p');
+	button.onclick=function(){
+      // p1.innerHTML=xj();
+      // console.log(arr);
+	}
+</script>
+</html>

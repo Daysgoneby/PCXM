@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 350px;
+			height: 100px;
+			background: #1171C5;
+			margin: 50px auto;
+			position: relative;
+		}
+		.sj{
+			width: 150px;
+			height: 60px;
+			position: absolute;
+			top: 20px;
+			font-size: 30px;
+			color: #fff;
+		}
+		.sf{
+			float: left;
+			width: 100px;
+			height: 50px;
+			margin-top: 5px;
+			line-height: 50px;
+			color: #fff;
+		}
+		.miao{
+			float: left;
+			width: 30px;
+			height: 30px;
+			margin-top: 25px;
+			font-size: 15px;
+			line-height: 30px;
+			margin-left: -20px;
+		}
+		.sj2{
+			width: 150px;
+			height: 60px;
+			position: absolute;
+			top: 20px;
+			left: 170px;
+		}
+		.day{
+			width: 80px;
+			height: 40px;
+			color: #fff;
+		}
+		.year{
+			width: 130px;
+			height: 20px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="sj">
+		<div class="sf"></div>
+		<div class="miao"></div>
+	</div>
+	
+	<div class="sj2">
+		<div class="day"></div>
+		<div class="year"></div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	setInterval(function(){
+		var sj =new Date();
+	var xs =sj.getHours();
+	var fen =sj.getMinutes();
+	 document.getElementsByClassName('sf')[0].innerHTML=xs+":"+fen;
+	var miao=sj.getSeconds();
+	document.getElementsByClassName('miao')[0].innerHTML=miao;
+	var day=sj.getDay();
+	switch(day){
+ 			case(2):document.getElementsByClassName("day")[0].innerHTML="星期二";break;
+			case(3):document.getElementsByClassName("day")[0].innerHTML="星期三";break;
+			case(4):document.getElementsByClassName("day")[0].innerHTML="星期四";break;
+			case(5):document.getElementsByClassName("day")[0].innerHTML="星期五";break;
+			case(6):document.getElementsByClassName("day")[0].innerHTML="星期六";break;
+			case(7):document.getElementsByClassName("day")[0].innerHTML="星期日";break;	
+	}
+	var year=sj.getFullYear();
+	var Month=sj.getMonth()+1;
+	var date=sj.getDate();
+	document.getElementsByClassName("year")[0].innerHTML=year+"年"+Month+"月"+date+"日";
+	
+	},1000)
+	
+</script>
+</html>

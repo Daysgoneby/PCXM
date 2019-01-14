@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<div class="box">
+	性名：<input type="text" name="" class="username">
+	联系方式：<input type="text" name="" class="emali">
+	年龄：<input type="number" name="" class="age">
+	<button class="add">添加用户</button>
+</div>
+<table border="1" width="700px;" style="text-align: center;" align="center" cellspacing="0" class="tb" >
+	<tr>
+		<td>性名</td>
+		<td>联系方式</td>
+		<td>年龄</td>
+		<td>操作</td>
+	</tr>
+	<tr>
+		<td>大海</td>
+		<td>1311272713</td>
+		<td>22</td>
+		<td>
+			<button onclick="del(this)">删除</button>
+		</td>
+	</tr>
+</table>
+</body>
+<script type="text/javascript">
+	//获取所以待操作的元素
+	var oUsername=document.querySelector(".username");
+	var oEmail=document.querySelector(".emali");
+	var oAge=document.querySelector(".age");
+	var oAdd=document.querySelector(".add");
+	var oTb=document.querySelector(".tb");
+	// console.log(oAdd)
+	//声明数组存放所以输入框的值是否为空
+	var arr=[false,false,false]
+	function del(obj){
+		//找到待删除的元素
+		var oTr = obj.parentNode.parentNode;
+		oTr.parentNode.removeChild(oTr);
+	}	
+
+
+	oUsername.onblur=function(){
+		var userVal=oUsername.value;
+		if(userVal==""){
+			oUsername.setAttribute("placeholder","用户名不能为空")
+			arr[0]=false;
+
+		}else{
+			oUsername.setAttribute("placeholder","");
+			arr[0]=true
+		}
+	}
+	oEmail.onblur=function(){
+		var emailVal=oEmail.value;
+		if(emailVal==""){
+			oEmail.setAttribute("placeholder","邮件不能为空");
+			arr[1]=false;
+
+		}else{
+			oEmail.setAttribute("placeholder","");
+			arr[1]=true
+
+		}
+	}
+	oAge.onblur=function(){
+		var ageVal=oAge.value;
+		// console.log(ageVal)
+		if(ageVal=="" ){
+			oAge.setAttribute("placeholder","年龄不合法");
+			arr[2]=false;
+
+
+		}else if (ageVal<=0) {
+			oAge.setAttribute("placeholder","年龄不能小于o");
+			arr[2]=false;
+
+		}else{
+			oAge.setAttribute("placeholder","");
+			arr[2]=true
+			
+		}
+	}
+
+
+
+	oAdd.onclick=function(){
+		//判断所以的输入框值是否违法
+		if(arr.indexOf(false)>=0){
+			oUsername.focus();
+
+		}else{
+			var username=oUsername.value;
+			var age= oAge.value;
+			var emali=oEmail.value;
+
+
+			var oNewTr=oTb.insertRow(oTb.rows.length);
+			oNewTr.innerHTML=`<td>${username}</td>
+		<td>${emali}</td>
+		<td>${age}</td>
+		<td>
+			<button onclick="del(this)">删除</button>
+		</td>`
+
+		oUsername.value=""
+		oEmail.value=""
+		oAge.value=""
+		}
+	}
+</script>
+</html>

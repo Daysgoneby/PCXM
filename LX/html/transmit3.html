@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width:900px;
+			height: 500px;
+			border: 1px solid black;
+			margin: 30px auto;
+		}
+		.seLeft{
+			width: 300px;
+			float: left;
+			font-size: 20px;
+		}
+		.btnBox{
+			width: 150px;
+			height: 400px;
+			float: left;
+		}
+		.seRight{
+			font-size: 20px;
+			width: 300px;
+			float: left;
+		}
+		button{
+			width: 150px;
+			height: 40px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<select class="seLeft" size="12" multiple>
+		<option value="">贵阳</option>
+		<option value="">遵义</option>
+		<option value="">桐梓</option>
+		<option value="">楚米</option>
+		<option value="">道真</option>
+		<option value="">贵定</option>
+	<lect>
+	<div class="btnBox">
+		<button class="toRight">--><button>
+		<button class="allToRight">>>><button>
+		<button class="toLeft"><--<button>
+		<button class="allToLeft"><<<<button>
+	</div>
+	<select class="seRight" size="12">
+		
+	<select>
+</div>
+</body>
+<script type="text/javascript">
+var oseLeft = document.querySelector(".seLeft");
+var oseRight = document.querySelector(".seRight");
+var otoRight = document.querySelector(".toRight");
+var oallToRight = document.querySelector(".allToRight");
+var otoLeft = document.querySelector(".toLeft");
+var oalltoLeft = document.querySelector(".allToLeft");
+
+// 1，给单独向右添加点击事件
+otoRight.onclick = function(){
+	// 扫描左边下拉框中所有项
+	for( var i = oseLeft.options.length-1; i >= 0 ; i-- ){
+		// 判断扫描项中被选中的项
+		if( oseLeft.options[i].selected ){
+			// 将选中的项添加至右边框中
+			oseRight.appendChild(oseLeft.options[i]);
+		}
+	}
+}
+//将左边所以的项添加到右边
+oallToRight.onclick=function(){
+	for(var i=oseRight.options.length-1;i>=0;i--){
+		oseRight.prepend(oseLeft.options[i]);
+
+	}
+}
+oalltoLeft.onclick=function(){
+	for(var i=oseRight.options.length-1;i>=0;i--){
+		oseLeft.prepend(oseRight.options[i]);
+
+	}
+}
+</script>
+</html>

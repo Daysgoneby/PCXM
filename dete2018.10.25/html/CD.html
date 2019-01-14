@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>二级菜单</title>
+		<link rel="shortcut icon" href="../img/favicon.ico">
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.menu{
+				width: 700px;
+				height: 50px;
+				background-color: yellow;
+				margin: 0 auto;
+				list-style: none;
+			}
+			.item{
+				width: 100px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				float: left;
+				position: relative;
+			}
+			.item a{
+				width: 100px;
+				height: 50px;
+				text-decoration: none;
+				display: inline-block;
+				color: black;
+			}
+			.box{
+				width: 100%;
+				line-height: 40px;
+				background-color: gainsboro;
+				display: none;
+				position: absolute;
+				top: 50px;
+				left: 0;
+			}
+			.item:hover .box{
+				display: block;
+			}
+			.item a:hover{
+				color: white;
+				font-weight: bold;
+				font-size: 20px;
+				background-color: black;
+			}
+			.box p:hover{
+				background-color: yellow;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.box1{
+				width: 1000px;
+				height: 25px;
+			}
+			.box1 a{
+				width: 76px;
+				float: left;
+				color: black;
+			}
+			.box2{
+				width: 1000px;
+				height: 25px;
+			}
+			.box2 a{
+				width: 76px;
+				float: left;
+				color: black;
+			}
+			.box3{
+				width: 1000px;
+				height: 50px;
+			}
+			.box3 a{
+				float: left;
+			}
+			.fx{
+				width: 1000px;
+				height: 150px;
+				display: none;
+			}
+			.item:hover .fx{
+				display: block;
+				background-color: gainsboro;
+			}
+			.fx a:hover{
+				background-color: yellow;
+				font-size: 16px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="menu">
+			<li class="item">
+				<a href="">首页</a>
+				<!--二级菜单-->
+			</li>
+			<li class="item">
+				<a href="">发现</a>
+				<div class="fx">
+				<div class="box1">
+					<a>平面</a>
+					<a>|</a>
+					<a>UI</a>
+					<a>|</a>
+					<a>网页</a>
+					<a>|</a>
+					<a>插画</a>
+					<a>|</a>
+					<a>动漫</a>
+					<a>|</a>
+					<a>摄影</a>
+					<a>|</a>
+					<a>空间</a>
+				</div>
+				<div class="box2">
+					<a>工业/产品</a>
+					<a>|</a>
+					<a>三维</a>
+					<a>|</a>
+					<a>影视</a>
+					<a>|</a>
+					<a>手工艺</a>
+					<a>|</a>
+					<a>纯艺术</a>
+					<a>|</a>
+					<a>服装</a>
+					<a>|</a>
+					<a>其他</a>
+				</div>
+				<hr width="1000" />
+				<div class="box3">
+				<a>精选作品></a>
+				<a>精选文章></a>
+				<a>精选收藏></a>
+			</div>
+			</div>
+			</li>
+			<li class="item">
+				<a href="">同城</a>
+			</li>
+			<li class="item">
+				<a href="">职位</a>
+				<div class="box">
+					<p>职位</p>
+					<p>公司</p>
+					<p>+发布职位</p>
+				</div>
+			</li>
+			<li class="item">
+				<a href="">活动</a>
+				<div class="box">
+					<p>设计大赛</p>
+					<p>专题策划</p>
+					<p>线上策划</p>
+					<p>线下策划</p>
+				</div>
+			</li>
+			<li class="item">
+				<a href="">正版素材</a>
+				<div class="box">
+					<p>图片</p>
+					<p>视频</p>
+				</div>
+			</li>
+			<li class="item">
+				<a href="">课程</a>
+			</li>
+		</ul>
+	</body>
+</html>

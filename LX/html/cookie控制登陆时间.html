@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.box{
+		width: 200px;
+		height: 250px;
+		border: 1px solid black;
+		background: #ccc;
+		margin: 50px auto;
+		text-align: center;
+
+	}
+</style>
+</head>
+<body>
+<div class="box">
+	<input type="text" name="" placeholder="请输入用户名" class="yh">
+	<input type="text" name="" placeholder="请输入密码" class="mm"><br>
+	<input type="checkbox" name="" class="dl">15天免登陆<br>
+	<input type="button" name="" value="登陆" class="but">
+</div>
+</body>
+<script type="text/javascript">
+	var oyh=document.querySelector(".yh");
+	var omm=document.querySelector(".mm");
+	var odl=document.querySelector(".dl");
+	var obut=document.querySelector(".but");
+	var d=new Date();
+	var time=15;
+	obut.onclick=function(){
+		var yh1=yh.value;
+		var mm1=mm.value;
+		if(oyh=""){
+			alert("用户名不能为空");
+		}else if(omm=""){
+			alert("密码不能为空");
+
+		}else if(odl.checkbox){
+			document.cookie="yh1=mm1;"+"expires="+d.toGMTString(d.setTime(d.getTime()+time*24*60*60*1000));
+
+		}else {
+			alert("你需要15天登陆吗");
+
+		}
+
+	}
+	
+</script>
+</html>

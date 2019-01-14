@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 300px;
+			height: 300px;
+			border: 3px solid red;
+		}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+<script type="text/javascript">
+	var b=document.getElementsByClassName("box")[0];
+	//鼠标悬停
+	/*b.onmouseover=function() {
+		console.log("鼠标悬停");
+	}
+	//鼠标移入
+	b.onmouseenter=function(){
+		console.log("鼠标移入");
+	}
+	//鼠标非悬停，会受子元素的影响
+	b.onmouseout=function(){
+		console.log("鼠标非悬停");
+	}*/
+	b.onmousewheel=function(){
+		console.log("鼠标滚动");
+	}
+</script>
+</html>

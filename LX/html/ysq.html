@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<style type="">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 400px;
+			height: 30px;
+			border-radius: 20px 20px 20px 20px;
+			margin: 100px auto;
+			border: 1px solid black;
+			text-align: center;
+			line-height: 30px;
+			background: red;
+
+		}
+	</style>
+
+</head>
+<body>
+<div class="box">0%</div>
+</body>
+<script type="">
+	var num=0;
+	var time=setInterval(function(){
+		num++;
+		document.getElementsByClassName('box')[0].innerHTML=num+"%";
+		if (num==100) {
+			clearInterval(time);
+			document.getElementsByClassName("box")[0].innerHTML="结束";
+		}
+	},50)
+</script>
+</html> 

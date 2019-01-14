@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body{background: url('bg.gif') repeat;}
+ul,li,p{margin: 0px;padding: 0px;list-style: none;}
+ #div{width: 1180px;height: 405px;border:5px solid #ccc;padding: 0px;margin: 0px auto;overflow: hidden;} 
+ .list{width: 3200px;}
+  .list li{float: left;width: 170px;height: 500px;;position: relative;
+      -moz-transition:width 2s;
+      transition: width 2s;
+     -moz-transition: width 2s; /* Firefox 4 */
+     -webkit-transition: width 2s; /* Safari 和 Chrome */
+     -o-transition: width 2s; /* Opera */
+  }
+.list:hover li{width: 107px;}
+.list li:hover{width: 538px;}
+.list li p{width: 100%;height: 100%;opacity: 0.5;position: absolute;top: 0px;left: 0px;background: black; }
+.list li:hover p{opacity:0}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript">
+</script>
+</head>
+<body >
+<div id="div">
+      <ul  class="list"> <!--如果设置父级与子级之间没有空隙的话，将margin和padding设为0即可-->
+          <li><img src="../img/1.jpg" style="width:538px;height:405px;"><p></p></li>
+          <li><img src="../img/2.jpg" style="width:538px;height:405px;"><p></p></li>
+          <li><img src="../img/3.jpg" style="width:538px;height:405px;"><p></p></li>
+          <li><img src="../img/4.jpg" style="width:538px;height:405px;"><p></p></li>
+          <li><img src="../img/5.jpg" style="width:538px;height:405px;"><p></p></li>
+          <li><img src="../img/6.jpg" style="width:538px;height:405px;"><p></p></li>
+          
+      </ul>
+</div>
+</body>
+</html>

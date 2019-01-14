@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		width: 500px;
+		height: 100px;
+		margin: 100px auto;
+	}
+</style>
+</head>
+<body>
+<div class="box">
+	<label>省份：</label>
+	<select class="province">
+		<option value="0">--请选择--</option>
+		<option value="1">北京</option>
+		<option value="2">贵州</option>
+		<option value="3">重庆</option>
+	</select>
+	<label>城市：</label>
+	<select class="city">
+		<option>--请选择--</option>
+		<option>通州</option>
+		<option>通州</option>
+		<option>通州</option>
+	</select>
+</div>
+</body>
+<script type="text/javascript">
+	var arr = new Array();
+	arr[0]=[];
+	arr[1] = ["朝阳","通州","昌平","海淀","燕郊"];
+	arr[2] = ["贵阳","遵义","六盘水","都匀","凯里"];
+	arr[3] = ["渝中","巴南","南岸","南川","万州"];
+
+	var oP = document.querySelector(".province");
+	var oC = document.querySelector(".city");
+
+	oP.onchange = function(){
+		// console.log(1111) //csww  测试无误
+		// 1,清空前次操作存在的数据
+		oC.options.length = 1;
+		//循环对应下标的所有城市并添加至城市下拉框中
+		for( var i = 0 ; i < arr[oP.value].length ; i++ ){
+			oC.add(new Option(arr[oP.value][i]));
+		}
+	}
+</script>
+</html>

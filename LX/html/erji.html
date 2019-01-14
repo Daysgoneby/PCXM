@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+
+</head>
+<body>
+<label>省份：</label>
+<select class="Osl" onchange="changeSelect()">
+	<option value="0">贵州</option>
+	<option value="1">上海</option>
+	<option value="2">北京</option>
+	<option value="3">广州</option>
+	<option value="4">重庆</option>
+</select>
+<label>城市：</label>
+<select class="Osl2">
+	<!-- <option>贵阳</option> -->
+	<option value="">--请选择--</option>
+</select> 
+<script type="">
+	/*var osl=document.querySlector(".Osl");
+	var osl2=document.querySlector(".Osl2");*/
+    var arr=[["贵阳","贵的","遵义","凯里"],
+             ["贵阳2","贵的2","遵义2","凯里2"],
+             ["贵阳3","贵的3","遵义3","凯里3"],
+             ["贵阳4","贵的4","遵义4","凯里4"],
+             ["贵阳5","贵的5","遵义5","凯里5"],
+             ];
+        function changeSelect(){
+        	var osl=document.querySelector(".Osl");
+	        var osl2=document.querySelector(".Osl2");
+        	var arr1=arr[osl.selectedIndex - 1];
+        	osl2.length = 1;
+        	for(var i=0; i < arr1.length; i++){
+            osl2.length [i+1] = new Option(arr1[i],arr[i]);
+        }
+    }
+
+
+
+        
+</script>
+</body>
+</html>

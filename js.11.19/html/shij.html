@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		//新加载文档，再加载js
+		//1.窗体加载
+		window.onload=function(){
+			
+			var but=document.getElementsByClassName("btn")[0];
+			//2.单击事件
+			/*but.onclick=function()*/
+			//s双击事件
+			/*but.ondblclick=function()*/
+			//鼠标右击事件
+			but.oncontextmenu=function()
+			{
+				//获取时间
+				var time=new Date();
+				//把获取的时间传给p标签
+				document.getElementsByTagName("p")[0].innerHTML=time;
+			}
+
+		}
+	</script>
+</head>
+<body>
+<div class="btn">鼠标点击事件</div>
+<p></p>
+</body>
+</html>

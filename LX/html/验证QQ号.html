@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	/*var qq=/^[1-9]\d{4,19}$/;*/
+	// var hao=/^([0-9]{3,4}-)?[1-9]\d{6,7}$/;
+	var hao =/^(\d{3,4}-)?[1-9]\d{6,7}$/;
+	var reg1 = /^(\d{3,4}-)?[1-9]\d{6,7}$/;
+
+    var box=/\s/g;
+	var a="我  爱  前端";
+	
+
+	var b="翠花，上加盐酸菜，哟呵，小妞真好看，给爷笑个五毛钱的，狗蛋，居然敢拒绝老子，你是笨猪吗";
+	var c=/[翠花哟呵狗蛋]/g;
+
+	 
+	document.write(hao.test("0852-12345675"));
+	document.write(reg1.test("0236-2134567"));
+	document.write(a.replace(box,""));
+	document.write(b.replace(c,"&&"));
+
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var oBody=document.querySelector("body");
+	var oDiv=document.createElement("div");
+	oBody.appendChild(oDiv);
+	oDiv.style.width="500px";
+	oDiv.style.height="500px";
+	oDiv.style.textAlign="center";
+	oDiv.style.margin="50px auto";
+	for(let i = 0;i < 6;i++)
+	{
+		var op=document.createElement("p");
+		oDiv.appendChild(op);
+		op.innerHTML="我是行";
+		if(i%2==0)
+		{
+			op.style.background="#aaa";
+			op.style.height="50px";
+			op.style.lineHeight="50px";
+		}
+		else
+		{
+			op.style.background="#eee";
+			op.style.height="50px";
+			op.style.lineHeight="50px";
+		}
+
+	}
+	var OP=document.querySelectorAll("p");
+
+	for(let j=0; j<OP.length;j++)
+		{
+			OP[j].onmouseenter=function()
+			{
+				for(let k=0;k<OP.length;k++)
+				{
+					if(k%2 == 0)
+					{
+						OP[k].style.background="#aaa";
+					}
+					else
+					{
+						OP[k].style.background="#eee";
+					}
+				}
+			
+				OP[j].style.background="skyblue";
+			}
+		}
+
+	
+</script>
+</html>

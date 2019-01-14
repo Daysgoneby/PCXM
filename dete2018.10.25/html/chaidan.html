@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>二级菜单</title>
+		<link rel="shortcut icon" href="../img/favicon.ico">
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.menu{
+				width: 600px;
+				height: 50px;
+				background-color: #cccc;
+				margin: 0 auto;
+				list-style: none;
+			}
+			.item{
+				width: 100px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				float: left;
+			}
+			.item a{
+				text-decoration: none;
+				color: black;
+				width: 100px;
+				height: 50px;
+				
+			}
+			.box{
+				width: 100%;
+				line-height: 40px;
+				background: #ddd;
+				display: none;
+			}
+			.item:hover .box{
+				display: block;
+			}
+				
+			.item:hover{
+				background: orange;
+				
+			}
+			.item:hover a{
+				color: red;
+			}
+			.item p:hover{
+				background: chartreuse;
+				color: darkcyan;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="menu">
+			<li class="item">
+				<a href="">首页</a>
+				<!--二级菜单-->
+				<div class="box">
+					<p>公司</p>
+					<p>简介</p>
+					<p>地址</p>
+				</div>
+			</li>
+			<li class="item">
+				<a href="">新闻</a>
+				<div class="box">
+					<p>娱乐新闻</p>
+					<p>军事新闻</p>
+					<p>独家新闻</p>
+				</div>
+			</li>
+			<li class="item">
+				<a href="">歌手</a>
+				<div class="box">
+					<p>超级歌手</p>
+					<p>金牌歌手</p>
+				</div>
+			</li>
+			<li class="item">
+				<a href="">演员</a>
+				<div class="box">
+					<p>男猪脚</p>
+					<p>女猪脚</p>
+					<p>跑龙套</p>
+				</div>
+			</li>
+			<li class="item">
+				<a href="">更多</a>
+				<div class="box">
+					<p>了解更多</p>
+					<p>留言</p>
+					<p>商城</p>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 700px;
+				height: 500px;
+				border: 1px solid red;
+				margin: 50px auto;
+				/*设置弹性盒*/
+				display: flex;
+				/*设置主轴的对齐方式*/
+				/*justify-content: space-between;
+				/*设置反向纵轴*/
+				/*flex-direction: column-reverse;*/
+				/*换行*/
+				flex-wrap: wrap;
+				/*测轴的对齐方式*/
+				align-content: flex-start;
+			}
+			.box span{
+				width: 100px;
+				height: 50px;
+				background: darkblue;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<span>1</span>
+			<span style="background: forestgreen;">2</span>
+			<span style="background: fuchsia ;">3</span>
+			<span style="background: #0000FF;">4</span>
+			<span style="background: gold;">5</span>
+			<span>6</span>
+			<span style="background: forestgreen;">7</span>
+			<span style="background: fuchsia ;">8</span>
+			<span style="background: #0000FF;">9</span>
+			<span style="background: gold;">10</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		div{
+			width: 179px;
+			height: 169px;
+			position: absolute;
+
+		}
+	</style>
+</head>
+<body style="background: black">
+
+	<div><img src="../img/img.png"></div>
+	<div><img src="../img/img.png"></div>
+	<div><img src="../img/img.png"></div>
+	<div><img src="../img/img.png"></div>
+	<div><img src="../img/img.png"></div>
+	<div><img src="../img/img.png"></div>
+	<div><img src="../img/img.png"></div>
+	<div><img src="../img/img.png"></div>
+	<div><img src="../img/img.png"></div>
+
+	
+
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+	var oImg=document.getElementsByTagName("div");
+	document.onmousemove=function(evt){
+			var e=evt||event;
+			for(var i=oImg.length-1;i>0;i--){
+				oImg[i].style.left=oImg[i-1].style.left;
+				oImg[i].style.top=oImg[i-1].style.top;
+
+
+			}
+			oImg[0].style.left=e.clientX+"px";
+			oImg[0].style.top=e.clientY+"px";
+		
+		}
+	}
+</script>
+</html>

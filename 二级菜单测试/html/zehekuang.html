@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.indexw_header_topR {
+		    width: auto;
+		    height: 34px;
+		    float: right;
+		}
+		.indexw_header_topR ul li {
+	    width: 58px;
+	    height: 34px;
+	    float: left;
+	    margin-left: 12px;
+	    position: relative;
+	    z-index: 3;
+		}
+		#my_cart_show {
+   		 padding-left: 7px;
+   		 margin-left: 0;
+		}
+		.indexw_header_img {
+    	width: 12px;
+   		height: 16px;
+    	float: left;
+    	margin-top: 7px;
+    	margin-right: 10px;
+		}
+		.indexw_header_div_1 {
+    width: 58px;
+    height: 34px;
+    display: block;
+    line-height: 34px;
+    color: #333!important;
+    float: left;
+}
+.indexw_shop_text {
+    width: auto;
+    float: left;
+    color: #333;
+    display: block;
+    text-align: center;
+}
+.indexw_shop_num {
+    width: 20px;
+    text-align: center;
+    display: block;
+    float: left;
+    font-size: 13px;
+    color: #ff8a81;
+    font-weight: bold;
+}
+.indexw_header_arrow {
+    width: 5px;
+    height: 4px;
+    float: left;
+    margin-top: 14px;
+    background: url(http://img.zbird.cn/ww3/pubheaderfooter/icon_drop.png) no-repeat left top;
+}
+
+element.style {
+    width: 240px;
+    top: 34px;
+    height: auto;
+    max-height: 399px;
+    min-height: 59px;
+    overflow: hidden auto;
+    display: none;
+}
+.indexw_header_show {
+    width: 73px;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    padding-bottom: 0px;
+    left: 0px;
+    top: 32px;
+    border: 1px solid #f8a89c;
+    background-color: #FFF;
+    text-align: left;
+    z-index: 5;
+}
+.indexw_shopCard_wushangpin {
+    width: 100%;
+    height: 61px;
+    line-height: 61px;
+    text-align: center;
+}
+
+	</style>
+</head>
+<body>
+<div class="indexw_header_topR">
+                <ul>
+                    <li style="width:105px;" id="mycartg">
+                        <div class="indexw_header_gray" id="my_cart_show">
+                            <img class="indexw_header_img" style="width:12px; height:16px;" src="http://im1.zbird.cn/ww3/pubheaderfooter/header_box.png">
+                            <div class="indexw_header_div_1" style="width:72px; line-height:32px;">
+                            	<a href="http://www.zbird.com/cart/" class="indexw_shop_text" rel="nofollow">购物车</a><span class="indexw_shop_num" id="my_header_count">0</span>
+                            	<span class="indexw_header_arrow"></span>
+                            </div>
+                        </div>
+
+                        <div id="indexw_header_cart" class="indexw_header_show" style="width: 240px; top: 34px; height: auto; max-height: 399px; min-height: 59px; overflow: hidden auto; display: none;">	    <div class="indexw_shopCard_wushangpin">购物车中无商品</div>
+        <input type="hidden" id="my_cart_all_count" value="0"></div>
+
+                    </li>
+                    <li style="width:58px">
+                        <div class=""> <a href="http://www.zbird.com/order/" class="indexw_header_div_1" rel="nofollow">我的订单</a>
+                        </div>
+                      </li>
+                      <li class="arrow_hover">
+                        <div class="indexw_header_gray"> 
+                            <a href="http://www.zbird.com/member/" class="indexw_header_div_1" style="line-height: 32px;" rel="nofollow">我的鸟巢</a> 
+                            <span class="indexw_header_arrow" style=""></span>
+                        </div>
+                        <div class="indexw_header_show" style="display: none;"> <a class="indexw_header_show_a" href="http://www.zbird.com/commonorder/" style="margin-top:5px;" rel="nofollow">订单查询</a> <a class="indexw_header_show_a" href="http://www.zbird.com/info/1937-11342.html">售后服务</a> <a class="indexw_header_show_a" href="http://www.zbird.com/pointgift/" style="padding-bottom:5px;">积分换礼</a> </div>
+                      </li>
+                      <li style="width:58px">
+                        <div class=""> <a target="_blank" href="http://www.zbird.com/education/" class="indexw_header_div_1">钻石课堂</a> </div>
+                      </li>
+                      <li class="phone_hover">
+                        <a href="http://www.zbird.com/shoujizhan/" class="indexw_header_div_1" target="_blank" style="margin-top: 1px;line-height:32px;">手机官网</a>
+                        <div class="u_hide_code"><img src="http://im1.zbird.cn/ww3/pubheaderfooter/code_wechat.jpg" alt="微信扫码" width="232" height="156"></div>
+                      </li>
+                      <!-- <li style="width:54px; text-align:right">
+                        <a id="memberCollectBtn" class="collectImg" onClick="addFavorite(this);">收藏本站</a>
+                      </li> -->
+                </ul>
+            </div><div class="box"></div>
+<div class="box1"></div>
+</body>
+</html>

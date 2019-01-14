@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<button>点击生成验证码</button>
+<button class="btn">点击生成验证码</button>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		/*var a= 10;
+		function add(){
+			alert(a*a);
+			return a*a;
+		}
+		/*add();*/
+		/*console.log(add());*/
+		//函数内嵌套函数
+		/*function add(){
+			var count=0;
+			function plus(){
+			return count+=1;	
+			}
+			console.log(plus());
+		}
+		console.log(add());*/
+		/*(function(a,b,c,d){
+			console.log(a*b*c);
+			console.log(d);
+			//arguments可以拿到所以的实参
+			console.log(arguments);
+
+		})(2,3,4,5,6,7);*/
+		//四舍五入
+		/*var a=3.8;
+		console.log(Math.round(a));*/
+		var button=document.getElementsByTagName("button")[0];
+		button.onclick=function(){
+		//随机数     范围0<a<1
+         var a=parseInt(Math.random()*10000)
+		if (999<a && a<10000) {
+			console.log(a);
+		}
+		else  {
+			console.log(a+parseInt(Math.random()*10));
+		}
+		
+		}
+
+        var btn=document.getElementsByClassName("btn")[0];
+        btn.onclick=function(){
+        	var b=Math.floor(Math.random()*6+5)
+        	console.log(b);
+        }
+
+	}
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<style type="">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#box{
+			width: 300px;
+			height: 300px;
+			border: 2px solid black;
+			margin: 50px auto;
+			font-size: 100px;
+			line-height: 300px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		10
+	</div>
+</body>
+<script type="">
+	var num=10;
+	var time=setInterval(function(){
+		num--;
+		document.getElementById('box').innerHTML=num;
+		if (num<=0) {
+			clerInterval(time);
+			document.getElementById("box").innerHTML="结束";
+		}
+	},1000)
+</script>
+</html>

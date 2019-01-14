@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			p{
+				width: 300px;
+			    hheight: 30px;
+			    margin: 20px auto;
+			    border: 1px solid red;
+			    /*禁止文本换行*/
+			    white-space: nowrap;
+			    /*溢出隐藏*/
+			    overflow: hidden;
+			    /*显示省号*/
+			    text-overflow: ellipsis;
+			}
+			div{
+				width: 300px;
+			    hheight: 30px;
+			    margin: 20px auto;
+			    border: 1px solid red;
+			    /*1.溢出隐藏*/
+			    overflow: hidden;
+			    /*2.显示省略号*/
+			    text-overflow: ellipsis;
+			    /*3.设置伸缩布局*/
+			   display: -webkit-box;
+			   /*4.垂直换行*/
+			  -webkit-box-orient:vertical ;
+			  /*5.设置行数*/
+			 -webkit-line-clamp: 3;
+			}
+		</style>
+	</head>
+	<body>
+		<p>春蚕死去了，但留下了华贵丝绸；蝴蝶死去了，但留下了漂亮的衣裳；画眉飞去了，但留下了美妙的歌声；花朵凋谢了，但留下了缕缕幽香；蜡烛燃尽了，但留下一片光明；雷雨过去了，但留下了七彩霓虹</p>
+		<div>、试试看——不是像企鹅那样静静的站在海边，翘首企盼机会的来临，而是如苍鹰一般不停的翻飞盘旋，执着的寻求。 试试看——不是面对峰回路转、杂草丛生的前途枉自嗟叹，而是披荆斩棘，举步探索。试试看——不是拘泥于命运的禁锢，听凭命运的摆布，而是奋力敲击其神秘的门扉，使之洞开一个新的天地。微笑着，去唱生活的歌谣。</div>
+	</body>
+</html>

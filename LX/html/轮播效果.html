@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 700px;
+			height: 320px;
+			border:1px solid black;
+			margin: 50px auto;
+			position: relative;
+		}
+		.tp{
+			width: 700px;
+			height: 320px;
+			border:1px solid black;
+
+		}
+		.but{
+			width: 80px;
+			height: 25px;
+			position: absolute;
+			top: 250px;
+			left: 330px;
+		}
+		.left{
+			position: absolute;
+			top: 150px;
+		}
+		.right{
+			position: absolute;
+			right: 0;
+			top: 150px;
+		}
+		img{
+			transition: all 2s;
+			opacity: 0;
+			position: absolute;
+
+		}
+		
+		.active{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="tp">
+		<img src="../img/lb1.jpg" style="opacity: 1">
+		<img src="../img/lb2.jpg" >
+		<img src="../img/lb3.jpg" >
+		<img src="../img/lb4.jpg" >
+		<img src="../img/lb5.jpg" >
+	</div>
+	<button class="left">《</button>
+	<button class="right">》</button>
+	<div class="but">
+	<button class="active">1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+	<button>5</button>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	var oBox=document.querySelector(".tp");
+	var oBtn=document.querySelectorAll(".but button"); 
+	var oTp=document.querySelectorAll(".tp img");
+	var oLeft=document.querySelector(".left");
+	var oRight=document.querySelector(".right");
+     //定义变量存放下标
+       var index=0;
+       //全集变时器
+       var time;
+
+
+
+	for(let i=0; i<oBtn.length; i++){
+		oBtn[i].onclick=function(){
+			changTmg(i);
+			
+
+	}
+	}
+	//封装换图函数
+	function changTmg(currentindex){
+		index=currentindex;
+		//检测右边
+		if(index>=oTp.length){
+			index=0;
+
+		}
+		//检测左边
+		if(index < 0){
+			index=oTp.length-1;
+
+		}
+		0
+		for(let j=0;j<oTp.length;j++){
+				oTp[j].style.opacity="0";
+				oBtn[j].setAttribute("class","");
+
+			}
+			oTp[index].style.opacity="1";
+			oBtn[index].setAttribute("class","active");
+
+		}
+
+		//给右按钮添加点击事件
+		oRight.onclick=function(){
+			index++;
+			changTmg(index);
+		}
+		//给左按钮添加点击事件
+		oLeft.onclick=function(){
+			index--;
+			changTmg(index);
+		}
+		function autoPlay(){
+			time=setInterval(function(){
+				index++;
+				changTmg(index);
+			},3000)
+		}
+		autoPlay();
+
+		oBox.onmouseover=function(){
+			clearInterval(time);
+		}
+
+</script>
+</html>

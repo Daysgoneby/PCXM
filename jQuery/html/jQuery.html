@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../jquery-1.9.0.min.js"></script>
+</head>
+<body>
+
+<div class="box">
+	<div></div>
+</div>
+<div></div>
+<p></p>
+
+
+
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li>
+		123456
+		<p>564135655</p>
+	</li>
+	
+
+</ul>
+</body>
+<script type="text/javascript">
+	//类选择器
+	console.log($(".box"));
+	//id选择器
+	console.log($("#box"));
+	//标签选择器
+	console.log($("p"));
+	//包含选择器
+	console.log($(".box div"));
+	//通配选择器
+	console.log($("*"));
+	//子代选择器
+	console.log($("box>div"));
+	//兄弟选择器
+	console.log($("box+"));
+
+
+
+     //获取元素的的子级
+	console.log($("ul").find("p"))
+	console.log($("ul").find("p"))
+	console.log($("ul").find("p"))
+	console.log($("ul").find("p"))
+</script>
+</html>
